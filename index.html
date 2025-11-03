@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYDCRAFF | Servidor Minecraft Espacial</title>
+    <meta name="description" content="MYDCRAFF: Survival espacial con planetas, economía y comunidad activa. Únete a la aventura cósmica.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="stilos.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="MYDCRAFF - Inicio">
+                <i class="fas fa-rocket" aria-hidden="true"></i> MYDCRAFF
+            </a>
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="#torneos">Torneos</a>
+                <a href="#eventos">Eventos PvP</a>
+                <a href="#clanes">Clanes</a>
+                <a href="#rangos">Rangos</a>
+                <a href="#unirse" class="btn btn--primary">¡Únete Ahora!</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <h1 id="hero-title">Explora un Universo de Minecraft</h1>
+                <p>MYDCRAFF: El Survival Espacial  ¿Estás listo para la aventura cósmica?</p>
+                <div class="hero__actions">
+                    <a href="#unirse" class="btn btn--accent">IP del Servidor</a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="planet" aria-hidden="true">
+                    <div class="moon" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Torneos -->
+        <section class="section" id="torneos" aria-labelledby="torneos-title">
+            <div class="container">
+                <h2 id="torneos-title" class="section__title">Torneos Activos</h2>
+                <p class="section__subtitle">Demuestra tus habilidades y gana premios increíbles</p>
+                <div class="tournaments-grid">
+                    <article class="tournament-card">
+                        <div class="tournament-header">
+                            <span class="tournament-badge active">En Curso</span>
+                            <h3>Torneo Estelar PvP</h3>
+                            <div class="tournament-prize">
+                                <i class="fas fa-trophy"></i>
+                                Premio: $100 USD
+                            </div>
+                        </div>
+                        <div class="tournament-info">
+                            <p><i class="fas fa-users"></i> 24/32 Jugadores</p>
+                            <p><i class="fas fa-clock"></i> Finaliza en: 3 días</p>
+                            <p><i class="fas fa-map"></i> Arena: Coliseo Espacial</p>
+                        </div>
+                        <button class="btn btn--secondary">Unirse al Torneo</button>
+                    </article>
+
+                    <article class="tournament-card">
+                        <div class="tournament-header">
+                            <span class="tournament-badge upcoming">Próximamente</span>
+                            <h3>Liga de Constructores</h3>
+                            <div class="tournament-prize">
+                                <i class="fas fa-trophy"></i>
+                                Premio: Rango VIP + $50 USD
+                            </div>
+                        </div>
+                        <div class="tournament-info">
+                            <p><i class="fas fa-users"></i> Inscripciones abiertas</p>
+                            <p><i class="fas fa-clock"></i> Inicia en: 5 días</p>
+                            <p><i class="fas fa-map"></i> Tema: Ciudad Futurista</p>
+                        </div>
+                        <button class="btn btn--secondary">Inscribirse</button>
+                    </article>
+
+                    <article class="tournament-card">
+                        <div class="tournament-header">
+                            <span class="tournament-badge finished">Finalizado</span>
+                            <h3>Carrera de Elytra</h3>
+                            <div class="tournament-prize">
+                                <i class="fas fa-trophy"></i>
+                                Ganador: SkyRacer
+                            </div>
+                        </div>
+                        <div class="tournament-info">
+                            <p><i class="fas fa-users"></i> 45 participantes</p>
+                            <p><i class="fas fa-clock"></i> Finalizado hace: 2 días</p>
+                            <p><i class="fas fa-map"></i> Mapa: Anillos Orbitales</p>
+                        </div>
+                        <button class="btn btn--secondary">Ver Resultados</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Eventos PvP -->
+        <section class="section" id="eventos" aria-labelledby="eventos-title">
+            <div class="container">
+                <h2 id="eventos-title" class="section__title">Eventos PvP</h2>
+                <p class="section__subtitle">Combates épicos y batallas legendarias</p>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3>Duelos 1vs1</h3>
+                        <p>Enfrentamientos individuales en arenas especializadas. Mejora tu ranking y gana recompensas.</p>
+                        <ul class="event-schedule">
+                            <li><strong>Horario:</strong> Todos los días</li>
+                            <li><strong>Recompensa:</strong> Puntos de honor</li>
+                            <li><strong>Mapas:</strong> 5 disponibles</li>
+                        </ul>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Batalla por Equipos</h3>
+                        <p>Forma equipos de 5 jugadores y lucha por el control del territorio en mapas estratégicos.</p>
+                        <ul class="event-schedule">
+                            <li><strong>Horario:</strong> Sábados 20:00</li>
+                            <li><strong>Recompensa:</strong> Coins + Items épicos</li>
+                            <li><strong>Equipos:</strong> 5vs5</li>
+                        </ul>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>King of the Hill</h3>
+                        <p>Controla la colina el mayor tiempo posible y defiéndela de otros jugadores.</p>
+                        <ul class="event-schedule">
+                            <li><strong>Horario:</strong> Domingos 18:00</li>
+                            <li><strong>Recompensa:</strong> Rango temporal + Coins</li>
+                            <li><strong>Duración:</strong> 30 minutos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Batalla de Clanes -->
+        <section class="section" id="clanes" aria-labelledby="clanes-title">
+            <div class="container">
+                <h2 id="clanes-title" class="section__title">Batalla de Clanes</h2>
+                <p class="section__subtitle">Los clanes más poderosos del servidor</p>
+                <div class="clans-leaderboard">
+                    <div class="clan-rank">
+                        <div class="rank-number">1</div>
+                        <div class="clan-info">
+                            <h3>Dragones Cósmicos</h3>
+                            <p>Líder: GalaxyMaster</p>
+                            <div class="clan-stats">
+                                <span><i class="fas fa-trophy"></i> 45 Victorias</span>
+                                <span><i class="fas fa-users"></i> 25 Miembros</span>
+                            </div>
+                        </div>
+                        <div class="clan-score">9850 pts</div>
+                    </div>
+
+                    <div class="clan-rank">
+                        <div class="rank-number">2</div>
+                        <div class="clan-info">
+                            <h3>Guardianes Estelares</h3>
+                            <p>Líder: StarGuardian</p>
+                            <div class="clan-stats">
+                                <span><i class="fas fa-trophy"></i> 38 Victorias</span>
+                                <span><i class="fas fa-users"></i> 22 Miembros</span>
+                            </div>
+                        </div>
+                        <div class="clan-score">8740 pts</div>
+                    </div>
+
+                    <div class="clan-rank">
+                        <div class="rank-number">3</div>
+                        <div class="clan-info">
+                            <h3>Depredadores Espaciales</h3>
+                            <p>Líder: SpaceHunter</p>
+                            <div class="clan-stats">
+                                <span><i class="fas fa-trophy"></i> 32 Victorias</span>
+                                <span><i class="fas fa-users"></i> 20 Miembros</span>
+                            </div>
+                        </div>
+                        <div class="clan-score">7650 pts</div>
+                    </div>
+                </div>
+                <div class="clans-actions">
+                    <button class="btn btn--primary">Crear Clan</button>
+                    <button class="btn btn--secondary">Unirse a Clan</button>
+                    <button class="btn btn--accent">Ver Todos los Clanes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Premios y Sorteos -->
+        <section class="section" id="premios" aria-labelledby="premios-title">
+            <div class="container">
+                <h2 id="premios-title" class="section__title">Premios y Sorteos</h2>
+                <p class="section__subtitle">Gana increíbles recompensas solo por jugar</p>
+                <div class="rewards-grid">
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <i class="fas fa-gift"></i>
+                            <h3>Sorteo Semanal</h3>
+                        </div>
+                        <div class="reward-content">
+                            <p>Participa jugando en el servidor durante la semana</p>
+                            <ul>
+                                <li>1° Premio: $50 USD</li>
+                                <li>2° Premio: Rango Viajero Estelar</li>
+                                <li>3° Premio: 5000 Coins</li>
+                            </ul>
+                            <div class="reward-timer">
+                                <i class="fas fa-clock"></i>
+                                <span id="sorteo-timer">5d 12h 30m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <i class="fas fa-medal"></i>
+                            <h3>Logros Mensuales</h3>
+                        </div>
+                        <div class="reward-content">
+                            <p>Completa desafíos y gana recompensas exclusivas</p>
+                            <ul>
+                                <li>Constructor del Mes: Mundo personalizado</li>
+                                <li>PvP del Mes: Espada legendaria</li>
+                                <li>Explorador del Mes: Elytra especial</li>
+                            </ul>
+                            <button class="btn btn--secondary">Ver Desafíos</button>
+                        </div>
+                    </div>
+
+                    <div class="reward-card">
+                        <div class="reward-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Eventos Especiales</h3>
+                        </div>
+                        <div class="reward-content">
+                            <p>Recompensas por participación en eventos especiales</p>
+                            <ul>
+                                <li>Halloween: Mascotas especiales</li>
+                                <li>Navidad: Skins exclusivas</li>
+                                <li>Aniversario: Rango legendario</li>
+                            </ul>
+                            <button class="btn btn--secondary">Próximos Eventos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Creadores -->
+        <section class="section" id="creadores" aria-labelledby="creadores-title">
+            <div class="container">
+                <h2 id="creadores-title" class="section__title">Creadores del Servidor</h2>
+                <p class="section__subtitle">El equipo detrás de MYDCRAFF</p>
+                <div class="creators-grid">
+                    <div class="creator-card">
+                        <div class="creator-avatar">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Alex Cosmic</h3>
+                        <p class="creator-role">Fundador & Developer</p>
+                        <p class="creator-desc">Creador de la idea original y desarrollador principal del servidor.</p>
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-twitch"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="creator-card">
+                        <div class="creator-avatar">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Tech Nova</h3>
+                        <p class="creator-role">Backend Developer</p>
+                        <p class="creator-desc">Especialista en plugins y optimización del servidor.</p>
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="creator-card">
+                        <div class="creator-avatar">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Luna Builder</h3>
+                        <p class="creator-role">Diseñadora & Builder</p>
+                        <p class="creator-desc">Creadora de los mundos y construcciones principales.</p>
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="creator-card">
+                        <div class="creator-avatar">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Mario Community</h3>
+                        <p class="creator-role">Community Manager</p>
+                        <p class="creator-desc">Gestiona la comunidad y organiza eventos.</p>
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Top Jugadores -->
+        <section class="section" id="top" aria-labelledby="top-title">
+            <div class="container">
+                <h2 id="top-title" class="section__title">Top 10 Jugadores</h2>
+                <p class="section__subtitle">Los mejores jugadores de MYDCRAFF</p>
+                <div class="players-leaderboard">
+                    <div class="player-rank top-1">
+                        <div class="rank-badge">1°</div>
+                        <div class="player-avatar">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="player-info">
+                            <h3>GalaxyMaster</h3>
+                            <p>Nivel 85 • Dragones Cósmicos</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>15,240 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank top-2">
+                        <div class="rank-badge">2°</div>
+                        <div class="player-avatar">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="player-info">
+                            <h3>StarGuardian</h3>
+                            <p>Nivel 82 • Guardianes Estelares</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>14,850 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank top-3">
+                        <div class="rank-badge">3°</div>
+                        <div class="player-avatar">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="player-info">
+                            <h3>SpaceHunter</h3>
+                            <p>Nivel 80 • Depredadores Espaciales</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>14,120 pts</span>
+                        </div>
+                    </div>
+
+                    <!-- Jugadores 4-10 -->
+                    <div class="player-rank">
+                        <div class="rank-number">4</div>
+                        <div class="player-info">
+                            <h3>MoonWalker</h3>
+                            <p>Nivel 78 • Sin clan</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>13,450 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank">
+                        <div class="rank-number">5</div>
+                        <div class="player-info">
+                            <h3>CosmicRider</h3>
+                            <p>Nivel 77 • Dragones Cósmicos</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>13,200 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank">
+                        <div class="rank-number">6</div>
+                        <div class="player-info">
+                            <h3>NebulaKing</h3>
+                            <p>Nivel 76 • Guardianes Estelares</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>12,980 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank">
+                        <div class="rank-number">7</div>
+                        <div class="player-info">
+                            <h3>AstroBuilder</h3>
+                            <p>Nivel 75 • Constructores Galácticos</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>12,750 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank">
+                        <div class="rank-number">8</div>
+                        <div class="player-info">
+                            <h3>SolarFlare</h3>
+                            <p>Nivel 74 • Sin clan</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>12,500 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank">
+                        <div class="rank-number">9</div>
+                        <div class="player-info">
+                            <h3>CometChaser</h3>
+                            <p>Nivel 73 • Depredadores Espaciales</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>12,300 pts</span>
+                        </div>
+                    </div>
+
+                    <div class="player-rank">
+                        <div class="rank-number">10</div>
+                        <div class="player-info">
+                            <h3>OrbitMaster</h3>
+                            <p>Nivel 72 • Dragones Cósmicos</p>
+                        </div>
+                        <div class="player-stats">
+                            <span>12,100 pts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Rangos (mantenida) -->
+        <section class="section" id="rangos" aria-labelledby="rangos-title">
+            <div class="container">
+                <h2 id="rangos-title" class="section__title">Rangos y Suscripciones</h2>
+                <p class="section__subtitle">Mejora tu experiencia con nuestros rangos exclusivos</p>
+                <div class="ranks-grid">
+                    <article class="rank">
+                        <div class="rank__header">
+                            <h3 class="rank__name">Explorador</h3>
+                            <div class="rank__price">Gratis</div>
+                        </div>
+                        <ul class="rank__features">
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Acceso al servidor</li>
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Participación en eventos</li>
+                            <li class="rank__feature"><i class="fas fa-times" aria-hidden="true"></i> Comandos especiales</li>
+                            <li class="rank__feature"><i class="fas fa-times" aria-hidden="true"></i> Acceso a áreas VIP</li>
+                        </ul>
+                        <button class="btn btn--secondary" style="width: 100%">Seleccionar</button>
+                    </article>
+                    
+                    <article class="rank rank--featured">
+                        <div class="rank__badge">Popular</div>
+                        <div class="rank__header">
+                            <h3 class="rank__name">Viajero Estelar</h3>
+                            <div class="rank__price">$4.99<span>/mes</span></div>
+                        </div>
+                        <ul class="rank__features">
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Todo lo del Explorador</li>
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Comandos especiales</li>
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Acceso a áreas VIP</li>
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Partículas personalizadas</li>
+                        </ul>
+                        <button class="btn btn--accent" style="width: 100%">Seleccionar</button>
+                    </article>
+                    
+                    <article class="rank">
+                        <div class="rank__header">
+                            <h3 class="rank__name">Guardian Galáctico</h3>
+                            <div class="rank__price">$9.99<span>/mes</span></div>
+                        </div>
+                        <ul class="rank__features">
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Todo lo del Viajero Estelar</li>
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Mascotas personalizadas</li>
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Acceso a mundos exclusivos</li>
+                            <li class="rank__feature"><i class="fas fa-check" aria-hidden="true"></i> Soporte prioritario</li>
+                        </ul>
+                        <button class="btn btn--secondary" style="width: 100%">Seleccionar</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel de Construcciones (mantenido) -->
+        <section class="section" id="construcciones" aria-labelledby="construcciones-title">
+            <div class="container">
+                <h2 id="construcciones-title" class="section__title">Construcciones de Nuestros Jugadores</h2>
+                <div class="carousel" role="region" aria-label="Carrusel de construcciones">
+                    <div class="carousel__track">
+                        <div class="carousel__slide" role="group" aria-label="1 de 3">
+                            <img src="https://images.unsplash.com/photo-1633617477271-d4f351ff7c7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Castillo espacial construido por CosmicBuilder" class="carousel__image" loading="lazy">
+                            <div class="carousel__info">
+                                <h3>Castillo Espacial</h3>
+                                <p>Por: CosmicBuilder</p>
+                            </div>
+                        </div>
+                        <div class="carousel__slide" role="group" aria-label="2 de 3">
+                            <img src="https://images.unsplash.com/photo-1627856013093-2513f9abe4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Ciudad futurista construida por GalacticArchitect" class="carousel__image" loading="lazy">
+                            <div class="carousel__info">
+                                <h3>Ciudad Futurista</h3>
+                                <p>Por: GalacticArchitect</p>
+                            </div>
+                        </div>
+                        <div class="carousel__slide" role="group" aria-label="3 de 3">
+                            <img src="https://images.unsplash.com/photo-1633287387306-f08b4b3671c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Base lunar con domos construida por MoonExplorer" class="carousel__image" loading="lazy">
+                            <div class="carousel__info">
+                                <h3>Base Lunar</h3>
+                                <p>Por: MoonExplorer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel__nav carousel__nav--prev" aria-label="Imagen anterior">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="carousel__nav carousel__nav--next" aria-label="Imagen siguiente">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                    <div class="carousel__indicators">
+                        <button class="carousel__indicator active" aria-label="Ir a imagen 1" aria-current="true"></button>
+                        <button class="carousel__indicator" aria-label="Ir a imagen 2"></button>
+                        <button class="carousel__indicator" aria-label="Ir a imagen 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section footer__info">
+                    <h3>Conecta con Nosotros</h3>
+                    <p><strong>📍 IP del Servidor:</strong> <span class="ip-address">play.mydcraff.net</span></p>
+                    <p><strong>👾 Discord:</strong> ¡Únete para obtener whitelist!</p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Síguenos en las Redes</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Discord"><i class="fab fa-discord" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitch"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3>Streamers de la Comunidad</h3>
+                    <div class="streamer-links">
+                        <a href="#" class="streamer-link"><i class="fab fa-twitch" aria-hidden="true"></i> CosmicGamer</a>
+                        <a href="#" class="streamer-link"><i class="fab fa-youtube" aria-hidden="true"></i> GalacticBuilder</a>
+                        <a href="#" class="streamer-link"><i class="fab fa-twitch" aria-hidden="true"></i> SpaceExplorer</a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 MYDCRAFF. Tu Aventura Cósmica Comienza Aquí.</p>
+        </div>
+    </footer>
+
+    <script src="scrip.js"></script>
+</body>
+</html>
