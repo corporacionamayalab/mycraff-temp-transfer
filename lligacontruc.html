@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liga de Constructores - MYDCRAFF</title>
+    <meta name="description" content="Liga de Constructores de MYDCRAFF. 5 clanes, 50 constructores, obras maestras épicas.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/ligacontruc.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-hammer"></i>
+                MYDCRAFF BUILD
+            </a>
+            <nav class="nav">
+                <a href="#clanes">Clanes</a>
+                <a href="#construcciones">Construcciones</a>
+                <a href="#ranking">Ranking</a>
+                <a href="../index.html" class="btn btn-secondary">Volver al Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Liga de Constructores</h1>
+                <p class="hero-subtitle">5 clanes • 50 constructores • Obras maestras épicas</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-gem"></i>
+                        <span>Premio: Rango VIP + $50 USD</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>2 semanas de construcción</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-map"></i>
+                        <span>Tema: Ciudad Futurista</span>
+                    </div>
+                </div>
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span>Tiempo restante:</span>
+                        <strong id="build-time">12 días 5 horas</strong>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="build-icon">
+                    <i class="fas fa-city"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clanes Participantes -->
+        <section id="clanes" class="section">
+            <h2 class="section-title">Clanes Participantes</h2>
+            <div class="clans-grid">
+                <!-- Clan 1 -->
+                <div class="clan-card">
+                    <div class="clan-header">
+                        <div class="clan-badge" style="background: #FFD700;">#1</div>
+                        <h3>Architectos Galácticos</h3>
+                        <div class="clan-score">9,850 pts</div>
+                    </div>
+                    <div class="clan-members">
+                        <h4>10 Constructores</h4>
+                        <div class="members-list">
+                            <div class="member">
+                                <i class="fas fa-crown"></i>
+                                <span>CosmicBuilder (Líder)</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>StructMaster</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>DesignPro</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>BlockArtist</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>BuildWizard</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>CityPlanner</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>TechArchitect</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>FutureBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>SkyDesigner</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>UrbanCreator</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clan-progress">
+                        <span>Progreso: 85%</span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clan 2 -->
+                <div class="clan-card">
+                    <div class="clan-header">
+                        <div class="clan-badge" style="background: #C0C0C0;">#2</div>
+                        <h3>Constructores Estelares</h3>
+                        <div class="clan-score">9,120 pts</div>
+                    </div>
+                    <div class="clan-members">
+                        <h4>10 Constructores</h4>
+                        <div class="members-list">
+                            <div class="member">
+                                <i class="fas fa-crown"></i>
+                                <span>StarArchitect (Líder)</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>OrbitBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>NebulaDesign</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>SpaceCreator</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>GalaxyMaker</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>CosmicDesigner</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>StellarBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>VoidArchitect</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>QuantumBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>SolarCreator</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clan-progress">
+                        <span>Progreso: 78%</span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 78%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clan 3 -->
+                <div class="clan-card">
+                    <div class="clan-header">
+                        <div class="clan-badge" style="background: #CD7F32;">#3</div>
+                        <h3>Maestros del Bloque</h3>
+                        <div class="clan-score">8,750 pts</div>
+                    </div>
+                    <div class="clan-members">
+                        <h4>10 Constructores</h4>
+                        <div class="members-list">
+                            <div class="member">
+                                <i class="fas fa-crown"></i>
+                                <span>BlockMaster (Líder)</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>ArtisanPro</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>CraftExpert</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>BuildArtist</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>DesignMaster</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>StructurePro</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>CityArtist</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>UrbanMaster</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>TechBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>FutureDesigner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clan-progress">
+                        <span>Progreso: 72%</span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 72%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clan 4 -->
+                <div class="clan-card">
+                    <div class="clan-header">
+                        <div class="clan-badge" style="background: #6a0dad;">#4</div>
+                        <h3>Ingenieros Cósmicos</h3>
+                        <div class="clan-score">8,250 pts</div>
+                    </div>
+                    <div class="clan-members">
+                        <h4>10 Constructores</h4>
+                        <div class="members-list">
+                            <div class="member">
+                                <i class="fas fa-crown"></i>
+                                <span>CosmicEngineer (Líder)</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>TechMaster</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>InnovationPro</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>FutureEngineer</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>SystemBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>DigitalArchitect</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>SmartBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>TechDesigner</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>InnovationMaster</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>SystemArchitect</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clan-progress">
+                        <span>Progreso: 65%</span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clan 5 -->
+                <div class="clan-card">
+                    <div class="clan-header">
+                        <div class="clan-badge" style="background: #9370db;">#5</div>
+                        <h3>Artistas del Espacio</h3>
+                        <div class="clan-score">7,890 pts</div>
+                    </div>
+                    <div class="clan-members">
+                        <h4>10 Constructores</h4>
+                        <div class="members-list">
+                            <div class="member">
+                                <i class="fas fa-crown"></i>
+                                <span>SpaceArtist (Líder)</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>CreativeMaster</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-star"></i>
+                                <span>ArtPro</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>DesignArtist</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>CreativeBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>ArtMaster</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>VisionaryPro</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>CreativeDesigner</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>ArtBuilder</span>
+                            </div>
+                            <div class="member">
+                                <i class="fas fa-user"></i>
+                                <span>VisionMaster</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clan-progress">
+                        <span>Progreso: 58%</span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 58%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Construcciones Ganadoras -->
+        <section id="construcciones" class="section">
+            <h2 class="section-title">Construcciones Ganadoras</h2>
+            <div class="constructions-showcase">
+                <!-- Primer Lugar -->
+                <div class="construction-card first-place">
+                    <div class="construction-badge">
+                        <i class="fas fa-trophy"></i>
+                        <span>1° Lugar</span>
+                    </div>
+                    <div class="construction-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Torre futurista - Arquitectos Galácticos">
+                        <div class="construction-overlay">
+                            <h3>Torre Futurista Nebula</h3>
+                            <p>Arquitectos Galácticos</p>
+                        </div>
+                    </div>
+                    <div class="construction-details">
+                        <div class="detail">
+                            <i class="fas fa-clock"></i>
+                            <span>120 horas de construcción</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-cube"></i>
+                            <span>45,000 bloques</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-users"></i>
+                            <span>10 constructores</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-star"></i>
+                            <span>Puntuación: 9.8/10</span>
+                        </div>
+                    </div>
+                    <div class="construction-description">
+                        <p>Una impresionante torre que combina elementos arquitectónicos futuristas con detalles espaciales. Incluye sistemas de transporte vertical y jardines flotantes.</p>
+                    </div>
+                </div>
+
+                <!-- Segundo Lugar -->
+                <div class="construction-card second-place">
+                    <div class="construction-badge">
+                        <i class="fas fa-medal"></i>
+                        <span>2° Lugar</span>
+                    </div>
+                    <div class="construction-image">
+                        <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Ciudad orbital - Constructores Estelares">
+                        <div class="construction-overlay">
+                            <h3>Ciudad Orbital Stellar</h3>
+                            <p>Constructores Estelares</p>
+                        </div>
+                    </div>
+                    <div class="construction-details">
+                        <div class="detail">
+                            <i class="fas fa-clock"></i>
+                            <span>115 horas de construcción</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-cube"></i>
+                            <span>42,000 bloques</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-users"></i>
+                            <span>10 constructores</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-star"></i>
+                            <span>Puntuación: 9.5/10</span>
+                        </div>
+                    </div>
+                    <div class="construction-description">
+                        <p>Una ciudad orbital completa con sistemas de gravedad artificial, puertos espaciales y residencias modulares. Destaca por su diseño funcional y estético.</p>
+                    </div>
+                </div>
+
+                <!-- Tercer Lugar -->
+                <div class="construction-card third-place">
+                    <div class="construction-badge">
+                        <i class="fas fa-award"></i>
+                        <span>3° Lugar</span>
+                    </div>
+                    <div class="construction-image">
+                        <img src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Centro tecnológico - Maestros del Bloque">
+                        <div class="construction-overlay">
+                            <h3>Centro Tecnológico Quantum</h3>
+                            <p>Maestros del Bloque</p>
+                        </div>
+                    </div>
+                    <div class="construction-details">
+                        <div class="detail">
+                            <i class="fas fa-clock"></i>
+                            <span>110 horas de construcción</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-cube"></i>
+                            <span>40,000 bloques</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-users"></i>
+                            <span>10 constructores</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-star"></i>
+                            <span>Puntuación: 9.2/10</span>
+                        </div>
+                    </div>
+                    <div class="construction-description">
+                        <p>Un complejo tecnológico avanzado con laboratorios de investigación, centros de datos y áreas de innovación. Sobresale por su atención al detalle técnico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking de Clanes -->
+        <section id="ranking" class="section">
+            <h2 class="section-title">Ranking de Clanes</h2>
+            <div class="ranking-table">
+                <div class="table-header">
+                    <span>Posición</span>
+                    <span>Clan</span>
+                    <span>Puntos</span>
+                    <span>Progreso</span>
+                    <span>Constructores</span>
+                </div>
+                <div class="table-row top-1">
+                    <span class="rank">1°</span>
+                    <span class="clan-name">
+                        <i class="fas fa-crown"></i>
+                        Architectos Galácticos
+                    </span>
+                    <span class="points">9,850</span>
+                    <span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </span>
+                    <span>10/10</span>
+                </div>
+                <div class="table-row top-2">
+                    <span class="rank">2°</span>
+                    <span class="clan-name">
+                        <i class="fas fa-medal"></i>
+                        Constructores Estelares
+                    </span>
+                    <span class="points">9,120</span>
+                    <span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 78%"></div>
+                        </div>
+                    </span>
+                    <span>10/10</span>
+                </div>
+                <div class="table-row top-3">
+                    <span class="rank">3°</span>
+                    <span class="clan-name">
+                        <i class="fas fa-award"></i>
+                        Maestros del Bloque
+                    </span>
+                    <span class="points">8,750</span>
+                    <span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 72%"></div>
+                        </div>
+                    </span>
+                    <span>10/10</span>
+                </div>
+                <div class="table-row">
+                    <span class="rank">4°</span>
+                    <span class="clan-name">Ingenieros Cósmicos</span>
+                    <span class="points">8,250</span>
+                    <span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </span>
+                    <span>10/10</span>
+                </div>
+                <div class="table-row">
+                    <span class="rank">5°</span>
+                    <span class="clan-name">Artistas del Espacio</span>
+                    <span class="points">7,890</span>
+                    <span>
+                        <div class="progress-bar small">
+                            <div class="progress-fill" style="width: 58%"></div>
+                        </div>
+                    </span>
+                    <span>10/10</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MYDCRAFF BUILD</h3>
+                    <p>Liga de Constructores 2025</p>
+                    <p>Donde la creatividad se encuentra con la ingeniería</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="../index.html">Inicio</a>
+                    <a href="#clanes">Clanes</a>
+                    <a href="#construcciones">Construcciones</a>
+                    <a href="#ranking">Ranking</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Reglas</h4>
+                    <a href="#">Bases del concurso</a>
+                    <a href="#">Criterios de evaluación</a>
+                    <a href="#">Premios</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <a href="#"><i class="fab fa-discord"></i> Discord Builders</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Soporte</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MYDCRAFF Liga de Constructores. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificación -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="js/ligacontruc.js"></script>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carreras de Elytra - MYDCRAFF</title>
+    <meta name="description" content="Carreras de Elytra de MYDCRAFF. 25 pilotos, 2 horas, el cielo es el límite.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/elytras.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-wind"></i>
+                MYDCRAFF ELYTRA
+            </a>
+            <nav class="nav">
+                <a href="#carrera-activa">Carrera Activa</a>
+                <a href="#mapas">Mapas</a>
+                <a href="#ranking">Ranking</a>
+                <a href="../index.html" class="btn btn-secondary">Volver al Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Carreras de Elytra</h1>
+                <p class="hero-subtitle">25 pilotos • 2 horas • El cielo es el límite</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-gem"></i>
+                        <span>Premio: Elytra Especial + $30 USD</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-rocket"></i>
+                        <span>Velocidad máxima: 80 m/s</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-firework"></i>
+                        <span>Cohetes ilimitados</span>
+                    </div>
+                </div>
+                <div class="race-timer">
+                    <div class="timer-card">
+                        <div class="timer-header">
+                            <i class="fas fa-clock"></i>
+                            <span>Tiempo de Carrera</span>
+                        </div>
+                        <div class="timer-display" id="race-timer">02:00:00</div>
+                        <div class="timer-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="race-progress" style="width: 0%"></div>
+                            </div>
+                            <span id="progress-text">0% completado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="elytra-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="flight-path"></div>
+            </div>
+        </section>
+
+        <!-- Carrera Activa -->
+        <section id="carrera-activa" class="section">
+            <h2 class="section-title">Carrera Activa</h2>
+            <div class="race-card featured">
+                <div class="race-header">
+                    <div class="race-badge active">En Progreso</div>
+                    <h3>Gran Premio Aéreo Nebula</h3>
+                    <div class="race-prize">
+                        <i class="fas fa-trophy"></i>
+                        Premio: Elytra Dragon + $30 USD
+                    </div>
+                </div>
+                
+                <div class="race-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>18/25 Pilotos</strong>
+                                <span>Aún puedes unirte</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>
+                                <strong>Mapa: Anillos Orbitales</strong>
+                                <span>15 checkpoints • 5km recorrido</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-stopwatch"></i>
+                            <div>
+                                <strong>Mejor tiempo:</strong>
+                                <span id="best-time">04:32.15</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-fire-alt"></i>
+                            <div>
+                                <strong>Cohetes usados:</strong>
+                                <span>1,247 totales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa de la Carrera -->
+                <div class="race-map">
+                    <h4>Recorrido: Anillos Orbitales</h4>
+                    <div class="map-preview">
+                        <div class="checkpoint" style="top: 20%; left: 10%;" data-checkpoint="1">
+                            <div class="checkpoint-marker"></div>
+                            <span class="checkpoint-label">Start</span>
+                        </div>
+                        <div class="checkpoint" style="top: 40%; left: 30%;" data-checkpoint="2">
+                            <div class="checkpoint-marker"></div>
+                        </div>
+                        <div class="checkpoint" style="top: 60%; left: 50%;" data-checkpoint="3">
+                            <div class="checkpoint-marker"></div>
+                        </div>
+                        <div class="checkpoint" style="top: 30%; left: 70%;" data-checkpoint="4">
+                            <div class="checkpoint-marker"></div>
+                        </div>
+                        <div class="checkpoint" style="top: 80%; left: 90%;" data-checkpoint="5">
+                            <div class="checkpoint-marker"></div>
+                            <span class="checkpoint-label">Finish</span>
+                        </div>
+                        <div class="flight-line"></div>
+                    </div>
+                    <div class="map-stats">
+                        <div class="map-stat">
+                            <span>Longitud:</span>
+                            <strong>5.2 km</strong>
+                        </div>
+                        <div class="map-stat">
+                            <span>Checkpoints:</span>
+                            <strong>15</strong>
+                        </div>
+                        <div class="map-stat">
+                            <span>Dificultad:</span>
+                            <strong>Alta</strong>
+                        </div>
+                        <div class="map-stat">
+                            <span>Récord:</span>
+                            <strong>04:28.90</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pilotos en Carrera -->
+                <div class="pilots-section">
+                    <h4>Pilotos en Carrera (18/25)</h4>
+                    <div class="pilots-grid">
+                        <!-- Pilotos 1-18 -->
+                        <div class="pilot-slot" data-position="1">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">SkyRacer</span>
+                                <span class="pilot-time">04:32.15</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">12/15</span>
+                                <span class="speed">78 m/s</span>
+                            </div>
+                        </div>
+                        <div class="pilot-slot" data-position="2">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">WindGlider</span>
+                                <span class="pilot-time">04:35.42</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">12/15</span>
+                                <span class="speed">76 m/s</span>
+                            </div>
+                        </div>
+                        <div class="pilot-slot" data-position="3">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">AirMaster</span>
+                                <span class="pilot-time">04:38.91</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">11/15</span>
+                                <span class="speed">75 m/s</span>
+                            </div>
+                        </div>
+                        <!-- Más pilotos hasta 18 -->
+                        <div class="pilot-slot" data-position="4">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">CloudSurfer</span>
+                                <span class="pilot-time">04:45.23</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">11/15</span>
+                                <span class="speed">72 m/s</span>
+                            </div>
+                        </div>
+                        <div class="pilot-slot" data-position="5">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">JetStream</span>
+                                <span class="pilot-time">04:48.67</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">10/15</span>
+                                <span class="speed">70 m/s</span>
+                            </div>
+                        </div>
+                        <div class="pilot-slot" data-position="6">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">AeroBlaze</span>
+                                <span class="pilot-time">04:52.18</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">10/15</span>
+                                <span class="speed">68 m/s</span>
+                            </div>
+                        </div>
+                        <div class="pilot-slot" data-position="7">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">SkyHunter</span>
+                                <span class="pilot-time">04:55.74</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">9/15</span>
+                                <span class="speed">65 m/s</span>
+                            </div>
+                        </div>
+                        <div class="pilot-slot" data-position="8">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">WindRider</span>
+                                <span class="pilot-time">04:58.92</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="checkpoints">9/15</span>
+                                <span class="speed">63 m/s</span>
+                            </div>
+                        </div>
+                        <!-- Continuar hasta 18 pilotos... -->
+                        <div class="pilot-slot empty" data-position="19">
+                            <div class="pilot-avatar">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="pilot-info">
+                                <span class="pilot-name">Espacio Libre</span>
+                                <span class="pilot-time">--:--.--</span>
+                            </div>
+                            <div class="pilot-stats">
+                                <span class="join-race">¡Únete!</span>
+                            </div>
+                        </div>
+                        <!-- Más espacios libres hasta 25 -->
+                    </div>
+                </div>
+
+                <div class="race-actions">
+                    <button class="btn btn-primary" id="join-race">
+                        <i class="fas fa-rocket"></i>
+                        Unirse a la Carrera
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        Ver Transmisión
+                    </button>
+                    <button class="btn btn-accent">
+                        <i class="fas fa-download"></i>
+                        Descargar Mapa
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapas Disponibles -->
+        <section id="mapas" class="section">
+            <h2 class="section-title">Mapas Disponibles</h2>
+            <div class="maps-grid">
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Mapa Anillos Orbitales">
+                        <div class="map-overlay">
+                            <h3>Anillos Orbitales</h3>
+                            <p>Actual</p>
+                        </div>
+                    </div>
+                    <div class="map-details">
+                        <div class="map-stat">
+                            <i class="fas fa-road"></i>
+                            <span>5.2 km</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span>15 checkpoints</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-mountain"></i>
+                            <span>Alta dificultad</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-clock"></i>
+                            <span>Récord: 04:28.90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Mapa Cañones Celestiales">
+                        <div class="map-overlay">
+                            <h3>Cañones Celestiales</h3>
+                            <p>Próximo</p>
+                        </div>
+                    </div>
+                    <div class="map-details">
+                        <div class="map-stat">
+                            <i class="fas fa-road"></i>
+                            <span>6.8 km</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span>18 checkpoints</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-mountain"></i>
+                            <span>Extrema dificultad</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-clock"></i>
+                            <span>Sin récord</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Mapa Túneles Aéreos">
+                        <div class="map-overlay">
+                            <h3>Túneles Aéreos</h3>
+                            <p>Disponible</p>
+                        </div>
+                    </div>
+                    <div class="map-details">
+                        <div class="map-stat">
+                            <i class="fas fa-road"></i>
+                            <span>4.5 km</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span>12 checkpoints</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-mountain"></i>
+                            <span>Media dificultad</span>
+                        </div>
+                        <div class="map-stat">
+                            <i class="fas fa-clock"></i>
+                            <span>Récord: 03:45.20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking de Pilotos -->
+        <section id="ranking" class="section">
+            <h2 class="section-title">Ranking de Pilotos</h2>
+            <div class="ranking-table">
+                <div class="table-header">
+                    <span>Pos</span>
+                    <span>Piloto</span>
+                    <span>Mejor Tiempo</span>
+                    <span>Carreras</span>
+                    <span>Victorias</span>
+                    <span>Puntos</span>
+                </div>
+                <div class="table-row top-1">
+                    <span class="rank">1°</span>
+                    <span class="pilot">
+                        <i class="fas fa-crown"></i>
+                        SkyRacer
+                    </span>
+                    <span class="time">04:28.90</span>
+                    <span>24</span>
+                    <span>8</span>
+                    <span class="points">1,850</span>
+                </div>
+                <div class="table-row top-2">
+                    <span class="rank">2°</span>
+                    <span class="pilot">
+                        <i class="fas fa-medal"></i>
+                        WindGlider
+                    </span>
+                    <span class="time">04:31.45</span>
+                    <span>22</span>
+                    <span>6</span>
+                    <span class="points">1,720</span>
+                </div>
+                <div class="table-row top-3">
+                    <span class="rank">3°</span>
+                    <span class="pilot">
+                        <i class="fas fa-medal"></i>
+                        AirMaster
+                    </span>
+                    <span class="time">04:33.78</span>
+                    <span>20</span>
+                    <span>5</span>
+                    <span class="points">1,650</span>
+                </div>
+                <!-- Más filas del ranking -->
+                <div class="table-row">
+                    <span class="rank">4°</span>
+                    <span class="pilot">CloudSurfer</span>
+                    <span class="time">04:36.12</span>
+                    <span>18</span>
+                    <span>3</span>
+                    <span class="points">1,520</span>
+                </div>
+                <div class="table-row">
+                    <span class="rank">5°</span>
+                    <span class="pilot">JetStream</span>
+                    <span class="time">04:38.90</span>
+                    <span>16</span>
+                    <span>2</span>
+                    <span class="points">1,480</span>
+                </div>
+                <div class="table-row">
+                    <span class="rank">6°</span>
+                    <span class="pilot">AeroBlaze</span>
+                    <span class="time">04:41.25</span>
+                    <span>15</span>
+                    <span>1</span>
+                    <span class="points">1,420</span>
+                </div>
+                <div class="table-row">
+                    <span class="rank">7°</span>
+                    <span class="pilot">SkyHunter</span>
+                    <span class="time">04:43.67</span>
+                    <span>14</span>
+                    <span>1</span>
+                    <span class="points">1,380</span>
+                </div>
+                <div class="table-row">
+                    <span class="rank">8°</span>
+                    <span class="pilot">WindRider</span>
+                    <span class="time">04:45.89</span>
+                    <span>12</span>
+                    <span>0</span>
+                    <span class="points">1,350</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips y Estrategias -->
+        <section class="section tips-section">
+            <h2 class="section-title">Tips para Carreras</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Uso de Cohetes</h3>
+                    <p>Usa cohetes en momentos estratégicos: al inicio, en rectas largas y para recuperar altura.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Rutas Óptimas</h3>
+                    <p>Encuentra la ruta más corta entre checkpoints. A veces volar más alto es más rápido.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Control de Velocidad</h3>
+                    <p>Mantén una velocidad constante de 70-75 m/s. Evita cambios bruscos de dirección.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Técnicas de Giro</h3>
+                    <p>Usa el mouse suavemente para girar. Los giros bruscos reducen tu velocidad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MYDCRAFF ELYTRA</h3>
+                    <p>Donde la velocidad se encuentra con la gracia</p>
+                    <p>Carreras épicas en los cielos de Minecraft</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="../index.html">Inicio</a>
+                    <a href="#carrera-activa">Carrera Activa</a>
+                    <a href="#mapas">Mapas</a>
+                    <a href="#ranking">Ranking</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <a href="#">Guía de Elytra</a>
+                    <a href="#">Mapas para Práctica</a>
+                    <a href="#">Comandos Útiles</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <a href="#"><i class="fab fa-discord"></i> Discord Elytra</a>
+                    <a href="#"><i class="fas fa-trophy"></i> Torneos Semanales</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MYDCRAFF Carreras de Elytra. Vuela más alto, vuela más rápido.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificación -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="js/elytras.js"></script>
+</body>
+</html>

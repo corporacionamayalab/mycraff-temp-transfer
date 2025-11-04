@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - MYDCRAFF</title>
+    <meta name="description" content="Tienda oficial de MYDCRAFF. Compra rangos, kits y beneficios para mejorar tu experiencia en el servidor.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/tienda.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-rocket"></i>
+                    MYDCRAFF
+                </a>
+                <nav class="nav">
+                    <a href="../index.html">Inicio</a>
+                    <a href="#categorias" class="active">Tienda</a>
+                    <a href="../clanes/index.html">Clanes</a>
+                    <a href="../torneos/index.html">Torneos</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="cart-btn" id="cart-toggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tienda MYDCRAFF</h1>
+                <p>Mejora tu experiencia con rangos exclusivos y beneficios únicos</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-bolt"></i>
+                        <span>Entrega Instantánea</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-shield-check"></i>
+                        <span>100% Seguro</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-headset"></i>
+                        <span>Soporte 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="categories">
+        <div class="container">
+            <div class="categories-grid">
+                <div class="category-card" data-category="rangos">
+                    <div class="category-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Rangos</h3>
+                    <p>Mejora tu estatus en el servidor</p>
+                </div>
+                <div class="category-card" data-category="kits">
+                    <div class="category-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Kits</h3>
+                    <p>Ventajas para tu aventura</p>
+                </div>
+                <div class="category-card" data-category="utilidades">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Utilidades</h3>
+                    <p>Comandos y herramientas</p>
+                </div>
+                <div class="category-card" data-category="cosmeticos">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Cosméticos</h3>
+                    <p>Personaliza tu experiencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="products">
+        <div class="container">
+            <!-- Rangos -->
+            <div class="category-section active" id="rangos-section">
+                <h2 class="section-title">Rangos Permanentes</h2>
+                <div class="products-grid">
+                    <!-- Rango 1 -->
+                    <div class="product-card has-image">
+                        <div class="product-badge popular has-image">POPULAR</div>
+                        <div class="product-image">
+                            <img src="images/rangos/explorador.jpg" alt="Rango Explorador" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-image-placeholder" style="display: none;">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                        </div>
+                        <div class="product-header">
+                            <h3>Explorador</h3>
+                            <div class="product-price">
+                                <span class="price">$4.99</span>
+                                <span class="period">PERMANENTE</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Acceso a /fly</li>
+                                <li><i class="fas fa-check"></i> 3 Homes adicionales</li>
+                                <li><i class="fas fa-check"></i> Prefix color personalizado</li>
+                                <li><i class="fas fa-check"></i> Partículas básicas</li>
+                                <li><i class="fas fa-check"></i> Kit mensual</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Rango Explorador" data-price="4.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <!-- Rango 2 -->
+                    <div class="product-card featured has-image">
+                        <div class="product-badge best has-image">MEJOR VALOR</div>
+                        <div class="product-image">
+                            <img src="images/rangos/viajero-estelar.jpg" alt="Rango Viajero Estelar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-image-placeholder" style="display: none;">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="product-header">
+                            <h3>Viajero Estelar</h3>
+                            <div class="product-price">
+                                <span class="price">$9.99</span>
+                                <span class="period">PERMANENTE</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Todo lo del Explorador</li>
+                                <li><i class="fas fa-check"></i> Acceso a /ec</li>
+                                <li><i class="fas fa-check"></i> 5 Homes adicionales</li>
+                                <li><i class="fas fa-check"></i> Mascota exclusiva</li>
+                                <li><i class="fas fa-check"></i> Kit semanal</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Rango Viajero Estelar" data-price="9.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <!-- Rango 3 -->
+                    <div class="product-card has-image">
+                        <div class="product-badge has-image">RECOMENDADO</div>
+                        <div class="product-image">
+                            <img src="images/rangos/guardian-cosmico.jpg" alt="Rango Guardian Cósmico" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-image-placeholder" style="display: none;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="product-header">
+                            <h3>Guardian Cósmico</h3>
+                            <div class="product-price">
+                                <span class="price">$19.99</span>
+                                <span class="period">PERMANENTE</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Todo lo del Viajero</li>
+                                <li><i class="fas fa-check"></i> Acceso a /tpahere</li>
+                                <li><i class="fas fa-check"></i> 8 Homes adicionales</li>
+                                <li><i class="fas fa-check"></i> Elytra especial</li>
+                                <li><i class="fas fa-check"></i> Kit semanal premium</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Rango Guardian Cósmico" data-price="19.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <!-- Rango 4 -->
+                    <div class="product-card has-image">
+                        <div class="product-image">
+                            <img src="images/rangos/dragon-legendario.jpg" alt="Rango Dragón Legendario" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-image-placeholder" style="display: none;">
+                                <i class="fas fa-dragon"></i>
+                            </div>
+                        </div>
+                        <div class="product-header">
+                            <h3>Dragón Legendario</h3>
+                            <div class="product-price">
+                                <span class="price">$34.99</span>
+                                <span class="period">PERMANENTE</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Todo lo del Guardian</li>
+                                <li><i class="fas fa-check"></i> Acceso a /vanish</li>
+                                <li><i class="fas fa-check"></i> Homes ilimitados</li>
+                                <li><i class="fas fa-check"></i> Tag color personalizado</li>
+                                <li><i class="fas fa-check"></i> Kit diario premium</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Rango Dragón Legendario" data-price="34.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kits -->
+            <div class="category-section" id="kits-section">
+                <h2 class="section-title">Kits Exclusivos</h2>
+                <div class="products-grid">
+                    <!-- Kit 1 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>Kit Inicio Rápido</h3>
+                            <div class="product-price">
+                                <span class="price">$2.99</span>
+                                <span class="period">UNA VEZ</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Herramientas de diamante</li>
+                                <li><i class="fas fa-check"></i> Armadura de hierro encantada</li>
+                                <li><i class="fas fa-check"></i> 64 bloques de comida</li>
+                                <li><i class="fas fa-check"></i> 16 ender pearls</li>
+                                <li><i class="fas fa-check"></i> 32 bloques de experiencia</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Kit Inicio Rápido" data-price="2.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <!-- Kit 2 -->
+                    <div class="product-card featured">
+                        <div class="product-badge popular">POPULAR</div>
+                        <div class="product-header">
+                            <h3>Kit Diamante Épico</h3>
+                            <div class="product-price">
+                                <span class="price">$5.99</span>
+                                <span class="period">UNA VEZ</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Herramientas encantadas</li>
+                                <li><i class="fas fa-check"></i> Armadura de diamante</li>
+                                <li><i class="fas fa-check"></i> 64 bloques de oro</li>
+                                <li><i class="fas fa-check"></i> Ender chest portable</li>
+                                <li><i class="fas fa-check"></i> 64 experien bottles</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Kit Diamante Épico" data-price="5.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <!-- Kit 3 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>Kit Netherite</h3>
+                            <div class="product-price">
+                                <span class="price">$12.99</span>
+                                <span class="period">UNA VEZ</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Herramientas netherite</li>
+                                <li><i class="fas fa-check"></i> Armadura netherite encant.</li>
+                                <li><i class="fas fa-check"></i> 16 netherite ingots</li>
+                                <li><i class="fas fa-check"></i> Elytra con cohetes</li>
+                                <li><i class="fas fa-check"></i> Totem de inmortalidad</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Kit Netherite" data-price="12.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilidades -->
+            <div class="category-section" id="utilidades-section">
+                <h2 class="section-title">Utilidades</h2>
+                <div class="products-grid">
+                    <!-- Utilidad 1 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>Comando /repair</h3>
+                            <div class="product-price">
+                                <span class="price">$3.99</span>
+                                <span class="period">PERMANENTE</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Repara cualquier item</li>
+                                <li><i class="fas fa-check"></i> Sin coste de experiencia</li>
+                                <li><i class="fas fa-check"></i> Cooldown: 5 minutos</li>
+                                <li><i class="fas fa-check"></i> Funciona en mano y armor</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Comando /repair" data-price="3.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <!-- Utilidad 2 -->
+                    <div class="product-card featured">
+                        <div class="product-badge popular">POPULAR</div>
+                        <div class="product-header">
+                            <h3>Home Extra (+3)</h3>
+                            <div class="product-price">
+                                <span class="price">$4.99</span>
+                                <span class="period">PERMANENTE</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> +3 homes adicionales</li>
+                                <li><i class="fas fa-check"></i> Stackeable hasta 15</li>
+                                <li><i class="fas fa-check"></i> Sin cooldown adicional</li>
+                                <li><i class="fas fa-check"></i> Compatible con rangos</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Home Extra (+3)" data-price="4.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <!-- Utilidad 3 -->
+                    <div class="product-card">
+                        <div class="product-header">
+                            <h3>Comando /feed & /heal</h3>
+                            <div class="product-price">
+                                <span class="price">$2.99</span>
+                                <span class="period">PERMANENTE</span>
+                            </div>
+                        </div>
+                        <div class="product-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Saca hambre al instante</li>
+                                <li><i class="fas fa-check"></i> Cura toda la vida</li>
+                                <li><i class="fas fa-check"></i> Cooldown: 3 minutos</li>
+                                <li><i class="fas fa-check"></i> Elimina efectos negativos</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Comando /feed & /heal" data-price="2.99">
+                            <i class="fas fa-shopping-cart"></i>
+                            COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MYDCRAFF</h3>
+                    <p>Servidor Minecraft Espacial</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="../index.html">Inicio</a>
+                    <a href="#categorias">Tienda</a>
+                    <a href="../clanes/index.html">Clanes</a>
+                    <a href="../torneos/index.html">Torneos</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="#"><i class="fas fa-ticket-alt"></i> Tickets</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Términos de Servicio</a>
+                    <a href="#">Política de Reembolsos</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MYDCRAFF. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrito Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="cart-close" id="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items del carrito se agregarán aquí -->
+        </div>
+        <div class="cart-total">
+            <span>Total: $<span id="cart-total">0.00</span></span>
+        </div>
+        <div class="cart-actions">
+            <button class="btn btn-secondary" id="clear-cart">Vaciar Carrito</button>
+            <button class="btn btn-primary" id="checkout">Proceder al Pago</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="js/tienda.js"></script>
+</body>
+</html>

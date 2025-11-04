@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos PvP - MYDCRAFF</title>
+    <meta name="description" content="Torneos PvP de MYDCRAFF. Compite con 25 jugadores y gana premios increíbles.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/torneospvp.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-rocket"></i>
+                MYDCRAFF
+            </a>
+            <nav class="nav">
+                <a href="#torneo-activo">Torneo Activo</a>
+                <a href="#proximos">Próximos</a>
+                <a href="#ranking">Ranking</a>
+                <a href="../index.html" class="btn btn-secondary">Volver al Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Torneos PvP</h1>
+                <p class="hero-subtitle">25 jugadores. 1 campeón. ¿Serás tú?</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-trophy"></i>
+                        <span>Premio: $100 USD</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span>25 Jugadores</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>Duración: 2 horas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="arena-icon">
+                    <i class="fas fa-crosshairs"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Torneo Activo -->
+        <section id="torneo-activo" class="section">
+            <h2 class="section-title">Torneo Activo</h2>
+            <div class="tournament-card featured">
+                <div class="tournament-header">
+                    <div class="tournament-badge active">En Progreso</div>
+                    <h3>Torneo Estelar PvP</h3>
+                    <div class="tournament-prize">
+                        <i class="fas fa-gem"></i>
+                        Premio: $100 USD + Rango VIP
+                    </div>
+                </div>
+                
+                <div class="tournament-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>25/25 Jugadores</strong>
+                                <span>Lleno - Listo para comenzar</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map"></i>
+                            <div>
+                                <strong>Arena: Coliseo Espacial</strong>
+                                <span>Mapa de combate 1v1</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Inicia en:</strong>
+                                <span id="countdown">15:00</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Modalidad</strong>
+                                <span>Eliminación directa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Jugadores -->
+                <div class="players-section">
+                    <h4>Jugadores Inscritos (25/25)</h4>
+                    <div class="players-grid">
+                        <!-- Jugadores 1-25 -->
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <span class="player-name">GalaxyMaster</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="player-name">StarGuardian</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="player-name">SpaceHunter</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">MoonWalker</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">CosmicRider</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">NebulaKing</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">AstroBuilder</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">SolarFlare</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">CometChaser</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">OrbitMaster</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <!-- Continuar hasta 25 jugadores -->
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">StellarWarrior</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">VoidWalker</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">QuantumFighter</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">CosmicBlade</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">StarDestroyer</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">NovaStriker</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">GalacticHunter</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">SpaceSamurai</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">MeteorFist</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">CometBreaker</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">OrbitStriker</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">SolarWarrior</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">LunarKnight</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">StarlightBlade</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                        <div class="player-slot" data-status="confirmed">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="player-name">CosmicChampion</span>
+                            <span class="player-status confirmed">Confirmado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tournament-actions">
+                    <button class="btn btn-primary" disabled>
+                        <i class="fas fa-door-open"></i>
+                        Torneo Lleno
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        Ver Transmisión
+                    </button>
+                    <button class="btn btn-accent">
+                        <i class="fas fa-bracket-curly"></i>
+                        Ver Brackets
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Próximos Torneos -->
+        <section id="proximos" class="section">
+            <h2 class="section-title">Próximos Torneos</h2>
+            <div class="tournaments-grid">
+                <div class="tournament-card">
+                    <div class="tournament-header">
+                        <div class="tournament-badge upcoming">Próximo</div>
+                        <h3>Liga de Constructores</h3>
+                        <div class="tournament-prize">
+                            <i class="fas fa-gem"></i>
+                            Premio: Rango VIP + $50 USD
+                        </div>
+                    </div>
+                    <div class="tournament-info">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>0/25 Jugadores</strong>
+                                    <span>Inscripciones abiertas</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar"></i>
+                                <div>
+                                    <strong>15 de Diciembre</strong>
+                                    <span>20:00 GMT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Inscribirse
+                    </button>
+                </div>
+
+                <div class="tournament-card">
+                    <div class="tournament-header">
+                        <div class="tournament-badge upcoming">Próximo</div>
+                        <h3>Carrera de Elytra</h3>
+                        <div class="tournament-prize">
+                            <i class="fas fa-gem"></i>
+                            Premio: Elytra Especial + $30 USD
+                        </div>
+                    </div>
+                    <div class="tournament-info">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>0/25 Jugadores</strong>
+                                    <span>Inscripciones abiertas</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar"></i>
+                                <div>
+                                    <strong>22 de Diciembre</strong>
+                                    <span>18:00 GMT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Inscribirse
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking PvP -->
+        <section id="ranking" class="section">
+            <h2 class="section-title">Ranking PvP</h2>
+            <div class="ranking-table">
+                <div class="table-header">
+                    <span>Posición</span>
+                    <span>Jugador</span>
+                    <span>Victorias</span>
+                    <span>Derrotas</span>
+                    <span>Puntos</span>
+                </div>
+                <div class="table-row top-1">
+                    <span class="rank">1°</span>
+                    <span class="player">
+                        <i class="fas fa-crown"></i>
+                        GalaxyMaster
+                    </span>
+                    <span>45</span>
+                    <span>8</span>
+                    <span class="points">1,850</span>
+                </div>
+                <div class="table-row top-2">
+                    <span class="rank">2°</span>
+                    <span class="player">
+                        <i class="fas fa-star"></i>
+                        StarGuardian
+                    </span>
+                    <span>42</span>
+                    <span>12</span>
+                    <span class="points">1,720</span>
+                </div>
+                <div class="table-row top-3">
+                    <span class="rank">3°</span>
+                    <span class="player">
+                        <i class="fas fa-star"></i>
+                        SpaceHunter
+                    </span>
+                    <span>38</span>
+                    <span>15</span>
+                    <span class="points">1,650</span>
+                </div>
+                <!-- Más filas del ranking -->
+                <div class="table-row">
+                    <span class="rank">4°</span>
+                    <span class="player">MoonWalker</span>
+                    <span>35</span>
+                    <span>18</span>
+                    <span class="points">1,520</span>
+                </div>
+                <div class="table-row">
+                    <span class="rank">5°</span>
+                    <span class="player">CosmicRider</span>
+                    <span>32</span>
+                    <span>20</span>
+                    <span class="points">1,480</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MYDCRAFF PvP</h3>
+                    <p>Torneos competitivos para los mejores jugadores</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="../index.html">Inicio</a>
+                    <a href="#torneo-activo">Torneo Activo</a>
+                    <a href="#ranking">Ranking</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MYDCRAFF. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificación -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="js/torneospvp.js"></script>
+</body>
+</html>
