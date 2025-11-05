@@ -20,10 +20,14 @@
                 MYDCRAFF
             </a>
             <nav class="nav">
-                <a href="#torneo-activo">Torneo Activo</a>
-                <a href="#proximos">Próximos</a>
-                <a href="#ranking">Ranking</a>
-                <a href="../index.html" class="btn btn-secondary">Volver al Inicio</a>
+                
+                
+                <a href="clanes.html">Clanes</a>
+                <a href="lligacontruc.html">Constructor</a>
+                <a href="elytras.html">Elytras</a>
+                <a href="trasmi.html">Envivo</a>
+                
+                <a href="ipserver.html" class="btn btn--primary">¡Únete Ahora!</a>
             </nav>
         </div>
     </header>
@@ -56,12 +60,60 @@
             </div>
         </section>
 
+        <!-- Sistema de Inscripción -->
+        <section id="inscripcion" class="section">
+            <h2 class="section-title">Inscribirse al Torneo</h2>
+            <div class="inscription-card">
+                <div class="inscription-form">
+                    <h3>Formulario de Inscripción</h3>
+                    <form id="inscription-form">
+                        <div class="form-group">
+                            <label for="player-name">Nombre de Jugador</label>
+                            <input type="text" id="player-name" required placeholder="Tu nombre en el juego">
+                        </div>
+                        <div class="form-group">
+                            <label for="player-email">Correo Electrónico</label>
+                            <input type="email" id="player-email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="player-discord">Discord ID</label>
+                            <input type="text" id="player-discord" required placeholder="Usuario#1234">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i>
+                            Enviar Inscripción
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Información para jugadores -->
+                <div class="player-info-panel">
+                    <h3>Estado de tu Inscripción</h3>
+                    <p>Una vez enviado el formulario, los administradores revisarán tu solicitud.</p>
+                    <div class="status-info">
+                        <div class="status-item">
+                            <span class="status-dot pending"></span>
+                            <span>Pendiente: Esperando revisión</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot confirmed"></span>
+                            <span>Confirmado: ¡Estás en el torneo!</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot rejected"></span>
+                            <span>Rechazado: No cumples los requisitos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Torneo Activo -->
         <section id="torneo-activo" class="section">
             <h2 class="section-title">Torneo Activo</h2>
             <div class="tournament-card featured">
                 <div class="tournament-header">
-                    <div class="tournament-badge active">En Progreso</div>
+                    <div class="tournament-badge active">MYDCRAFF</div>
                     <h3>Torneo Estelar PvP</h3>
                     <div class="tournament-prize">
                         <i class="fas fa-gem"></i>
@@ -74,8 +126,8 @@
                         <div class="info-item">
                             <i class="fas fa-users"></i>
                             <div>
-                                <strong>25/25 Jugadores</strong>
-                                <span>Lleno - Listo para comenzar</span>
+                                <strong id="players-count">0/25 Jugadores</strong>
+                                <span>Inscripciones abiertas</span>
                             </div>
                         </div>
                         <div class="info-item">
@@ -104,212 +156,29 @@
 
                 <!-- Lista de Jugadores -->
                 <div class="players-section">
-                    <h4>Jugadores Inscritos (25/25)</h4>
-                    <div class="players-grid">
-                        <!-- Jugadores 1-25 -->
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-crown"></i>
-                            </div>
-                            <span class="player-name">GalaxyMaster</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="player-name">StarGuardian</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="player-name">SpaceHunter</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">MoonWalker</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">CosmicRider</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">NebulaKing</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">AstroBuilder</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">SolarFlare</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">CometChaser</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">OrbitMaster</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <!-- Continuar hasta 25 jugadores -->
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">StellarWarrior</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">VoidWalker</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">QuantumFighter</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">CosmicBlade</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">StarDestroyer</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">NovaStriker</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">GalacticHunter</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">SpaceSamurai</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">MeteorFist</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">CometBreaker</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">OrbitStriker</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">SolarWarrior</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">LunarKnight</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">StarlightBlade</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
-                        <div class="player-slot" data-status="confirmed">
-                            <div class="player-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span class="player-name">CosmicChampion</span>
-                            <span class="player-status confirmed">Confirmado</span>
-                        </div>
+                    <h4 id="confirmed-players-title">Jugadores Inscritos (0/25)</h4>
+                    <div class="players-grid" id="confirmed-players-list">
+                        <p class="no-players">No hay jugadores confirmados todavía</p>
                     </div>
                 </div>
 
                 <div class="tournament-actions">
-                    <button class="btn btn-primary" disabled>
-                        <i class="fas fa-door-open"></i>
-                        Torneo Lleno
+                    <button class="btn btn-primary" id="join-tournament">
+                        <i class="fas fa-user-plus"></i>
+                        Unirse al Torneo
                     </button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-eye"></i>
-                        Ver Transmisión
-                    </button>
-                    <button class="btn btn-accent">
-                        <i class="fas fa-bracket-curly"></i>
-                        Ver Brackets
-                    </button>
+                    
                 </div>
             </div>
         </section>
 
         <!-- Próximos Torneos -->
         <section id="proximos" class="section">
-            <h2 class="section-title">Próximos Torneos</h2>
+            <h2 class="section-title">Sala De Torneos</h2>
             <div class="tournaments-grid">
                 <div class="tournament-card">
                     <div class="tournament-header">
-                        <div class="tournament-badge upcoming">Próximo</div>
+                        <div class="tournament-badge upcoming">liga 1</div>
                         <h3>Liga de Constructores</h3>
                         <div class="tournament-prize">
                             <i class="fas fa-gem"></i>
@@ -334,12 +203,11 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary">
-                        <i class="fas fa-user-plus"></i>
-                        Inscribirse
-                    </button>
+                    <a href="lligacontruc.html" class="btn btn-primary">
+    <i class="fas fa-user-plus"></i>
+    Inscribirse
+                    </a>
                 </div>
-
                 <div class="tournament-card">
                     <div class="tournament-header">
                         <div class="tournament-badge upcoming">Próximo</div>
@@ -367,10 +235,10 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary">
-                        <i class="fas fa-user-plus"></i>
-                        Inscribirse
-                    </button>
+                    <a href="elytras.html" class="btn btn-primary">
+    <i class="fas fa-user-plus"></i>
+    Inscribirse
+                    </a>
                 </div>
             </div>
         </section>
@@ -416,7 +284,6 @@
                     <span>15</span>
                     <span class="points">1,650</span>
                 </div>
-                <!-- Más filas del ranking -->
                 <div class="table-row">
                     <span class="rank">4°</span>
                     <span class="player">MoonWalker</span>
@@ -448,6 +315,9 @@
                     <a href="../index.html">Inicio</a>
                     <a href="#torneo-activo">Torneo Activo</a>
                     <a href="#ranking">Ranking</a>
+                    <a href="#" id="admin-login-link">
+                    <i class="fas fa-lock"></i> Panel
+                </a>
                 </div>
                 <div class="footer-section">
                     <h4>Contacto</h4>
@@ -460,6 +330,108 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lock"></i> Acceso Administrativo</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="admin-username">Usuario</label>
+                    <input type="text" id="admin-username" required placeholder="Usuario administrador">
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Contraseña</label>
+                    <input type="password" id="admin-password" required placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-sign-in-alt"></i> Ingresar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Panel de Administración -->
+    <div id="admin-panel" class="admin-panel-modal">
+        <div class="admin-panel-content">
+            <div class="admin-header">
+                <h3><i class="fas fa-cogs"></i> Panel de Administración</h3>
+                <button class="btn btn-secondary btn-sm" id="logout-admin">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </div>
+            
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="pending">Pendientes</button>
+                <button class="tab-btn" data-tab="confirmed">Confirmados</button>
+                <button class="tab-btn" data-tab="rejected">Rechazados</button>
+                <button class="tab-btn" data-tab="management">Gestión</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Pestaña Pendientes -->
+                <div id="tab-pending" class="tab-pane active">
+                    <h4>Jugadores Pendientes de Revisión</h4>
+                    <div id="pending-list" class="players-grid admin-grid">
+                        <!-- Jugadores pendientes -->
+                    </div>
+                </div>
+
+                <!-- Pestaña Confirmados -->
+                <div id="tab-confirmed" class="tab-pane">
+                    <h4>Jugadores Confirmados para el Torneo</h4>
+                    <div id="confirmed-admin-list" class="players-grid admin-grid">
+                        <!-- Jugadores confirmados -->
+                    </div>
+                </div>
+
+                <!-- Pestaña Rechazados -->
+                <div id="tab-rejected" class="tab-pane">
+                    <h4>Jugadores Rechazados</h4>
+                    <div id="rejected-list" class="players-grid admin-grid">
+                        <!-- Jugadores rechazados -->
+                    </div>
+                </div>
+
+                <!-- Pestaña Gestión -->
+                <div id="tab-management" class="tab-pane">
+                    <h4>Gestión de Jugadores</h4>
+                    <div class="management-actions">
+                        <button class="btn btn-warning" id="clear-rejected">
+                            <i class="fas fa-trash"></i> Limpiar Rechazados
+                        </button>
+                        <button class="btn btn-danger" id="clear-all">
+                            <i class="fas fa-broom"></i> Limpiar Todos
+                        </button>
+                        <button class="btn btn-info" id="export-data">
+                            <i class="fas fa-download"></i> Exportar Datos
+                        </button>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h5>Total Jugadores</h5>
+                            <span id="total-players">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Confirmados</h5>
+                            <span id="confirmed-count">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Pendientes</h5>
+                            <span id="pending-count">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Rechazados</h5>
+                            <span id="rejected-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Notificación -->
     <div id="notification" class="notification">

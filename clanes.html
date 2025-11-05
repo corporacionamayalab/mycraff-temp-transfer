@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batalla de Clanes - MYDCRAFF</title>
-    <meta name="description" content="Sistema de Clanes de MYDCRAFF. Los clanes más poderosos, alianzas estratégicas y batallas épicas.">
+    <title>Inscripción de Clanes - MYDCRAFF</title>
+    <meta name="description" content="Sistema de inscripción de clanes para torneos de MYDCRAFF. Inscribe tu clan y compite por la gloria.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/clanes.css">
 </head>
@@ -20,11 +20,11 @@
                 MYDCRAFF CLANES
             </a>
             <nav class="nav">
-                <a href="#top-clanes">Top Clanes</a>
-                <a href="#sistema-clanes">Sistema</a>
-                <a href="#alianzas">Alianzas</a>
-                <a href="#guerra">Guerra</a>
-                <a href="../index.html" class="btn btn-secondary">Volver al Inicio</a>
+                <a href="torneospvp.html">Torneos PvP</a>
+                <a href="lligacontruc.html">Constructor</a>
+                <a href="elytras.html">Elytras</a>
+                
+                <a href="ipserver.html" class="btn btn--primary">¡Únete Ahora!</a>
             </nav>
         </div>
     </header>
@@ -33,452 +33,164 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-                <h1>Batalla de Clanes</h1>
-                <p class="hero-subtitle">Unidos somos más fuertes. Enfrentamientos épicos entre los clanes más poderosos de MYDCRAFF.</p>
+                <h1>Inscripción de Clanes</h1>
+                <p class="hero-subtitle">Reúne a tu equipo de 10 guerreros y compite por la gloria en los torneos de clanes.</p>
                 <div class="hero-stats">
                     <div class="stat">
                         <i class="fas fa-users"></i>
-                        <span>48 Clanes Activos</span>
+                        <span>10 Jugadores por Clan</span>
                     </div>
                     <div class="stat">
                         <i class="fas fa-trophy"></i>
-                        <span>156 Batallas Mensuales</span>
+                        <span>Premio: $500 USD</span>
                     </div>
                     <div class="stat">
-                        <i class="fas fa-medal"></i>
-                        <span>+1200 Miembros</span>
+                        <i class="fas fa-calendar"></i>
+                        <span>Torneo Semanal</span>
                     </div>
                 </div>
                 <div class="hero-actions">
-                    <button class="btn btn-primary" id="create-clan">
-                        <i class="fas fa-plus"></i>
-                        Crear Clan
+                    <button class="btn btn-primary" id="inscribir-clan">
+                        <i class="fas fa-edit"></i>
+                        Inscribir Clan
                     </button>
-                    <button class="btn btn-accent" id="join-clan">
-                        <i class="fas fa-user-plus"></i>
-                        Unirse a Clan
-                    </button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-book"></i>
-                        Reglas de Clanes
-                    </button>
+                    
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="clan-badge-large">
-                    <i class="fas fa-crown"></i>
+                    <i class="fas fa-users"></i>
                 </div>
-                <div class="floating-shields">
-                    <div class="shield" style="--delay: 0s"></div>
-                    <div class="shield" style="--delay: 1s"></div>
-                    <div class="shield" style="--delay: 2s"></div>
+                <div class="floating-players">
+                    <div class="player-float" style="--delay: 0s"></div>
+                    <div class="player-float" style="--delay: 1s"></div>
+                    <div class="player-float" style="--delay: 2s"></div>
+                    <div class="player-float" style="--delay: 3s"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Top 3 Clanes -->
-        <section id="top-clanes" class="section">
-            <h2 class="section-title">Top 3 Clanes del Servidor</h2>
-            <div class="top-clans-grid">
-                <!-- Primer Lugar -->
-                <div class="clan-card top-1">
-                    <div class="clan-rank-badge">
-                        <i class="fas fa-crown"></i>
-                        <span>#1</span>
+        <!-- Estado de Inscripción -->
+        <section id="estado-inscripcion" class="section">
+            <h2 class="section-title">Estado de tu Inscripción</h2>
+            <div class="status-container">
+                <div class="status-card pending" id="status-pending">
+                    <div class="status-icon">
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <div class="clan-header">
-                        <div class="clan-icon">
-                            <i class="fas fa-dragon"></i>
-                        </div>
-                        <div class="clan-info">
-                            <h3>Dragones Cósmicos</h3>
-                            <p class="clan-tag">[DRAGON]</p>
-                            <div class="clan-leader">
-                                <i class="fas fa-crown"></i>
-                                Líder: GalaxyMaster
-                            </div>
+                    <div class="status-content">
+                        <h3>En Revisión</h3>
+                        <p>Tu clan está siendo revisado por los administradores</p>
+                        <div class="status-details" id="pending-details">
+                            <!-- Detalles de clan pendiente -->
                         </div>
                     </div>
-                    <div class="clan-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">9,850</span>
-                            <span class="stat-label">Puntos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">45</span>
-                            <span class="stat-label">Victorias</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">25/30</span>
-                            <span class="stat-label">Miembros</span>
-                        </div>
+                </div>
+                
+                <div class="status-card confirmed" id="status-confirmed" style="display: none;">
+                    <div class="status-icon">
+                        <i class="fas fa-check-circle"></i>
                     </div>
-                    <div class="clan-details">
-                        <div class="detail">
-                            <i class="fas fa-calendar"></i>
-                            <span>Fundado: 15/03/2024</span>
+                    <div class="status-content">
+                        <h3>¡Inscripción Aceptada!</h3>
+                        <p>Tu clan ha sido aceptado en el torneo</p>
+                        <div class="status-details" id="confirmed-details">
+                            <!-- Detalles de clan aceptado -->
                         </div>
-                        <div class="detail">
-                            <i class="fas fa-crosshairs"></i>
-                            <span>Especialidad: PvP</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-tag"></i>
-                            <span>Nivel: Máximo</span>
-                        </div>
-                    </div>
-                    <div class="clan-description">
-                        <p>El clan más temido y respetado del servidor. Especialistas en combate PvP y estrategias de guerra. Han dominado las temporadas consecutivas.</p>
-                    </div>
-                    <div class="clan-actions">
-                        <button class="btn btn-small btn-primary">Ver Perfil</button>
-                        <button class="btn btn-small btn-secondary">Solicitar Unión</button>
                     </div>
                 </div>
 
-                <!-- Segundo Lugar -->
-                <div class="clan-card top-2">
-                    <div class="clan-rank-badge">
-                        <i class="fas fa-medal"></i>
-                        <span>#2</span>
+                <div class="status-card rejected" id="status-rejected" style="display: none;">
+                    <div class="status-icon">
+                        <i class="fas fa-times-circle"></i>
                     </div>
-                    <div class="clan-header">
-                        <div class="clan-icon">
-                            <i class="fas fa-shield-alt"></i>
+                    <div class="status-content">
+                        <h3>Inscripción Rechazada</h3>
+                        <p>Tu clan no cumple los requisitos</p>
+                        <div class="status-details" id="rejected-details">
+                            <!-- Razones del rechazo -->
                         </div>
-                        <div class="clan-info">
-                            <h3>Guardianes Estelares</h3>
-                            <p class="clan-tag">[GUARD]</p>
-                            <div class="clan-leader">
-                                <i class="fas fa-crown"></i>
-                                Líder: StarGuardian
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clan-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">9,120</span>
-                            <span class="stat-label">Puntos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">38</span>
-                            <span class="stat-label">Victorias</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">22/30</span>
-                            <span class="stat-label">Miembros</span>
-                        </div>
-                    </div>
-                    <div class="clan-details">
-                        <div class="detail">
-                            <i class="fas fa-calendar"></i>
-                            <span>Fundado: 22/02/2024</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-fort-awesome"></i>
-                            <span>Especialidad: Defensa</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-tag"></i>
-                            <span>Nivel: Máximo</span>
-                        </div>
-                    </div>
-                    <div class="clan-description">
-                        <p>Maestros de la defensa y protección de territorios. Con bases impenetrables y estrategias defensivas que han frustrado los mejores ataques.</p>
-                    </div>
-                    <div class="clan-actions">
-                        <button class="btn btn-small btn-primary">Ver Perfil</button>
-                        <button class="btn btn-small btn-secondary">Solicitar Unión</button>
                     </div>
                 </div>
 
-                <!-- Tercer Lugar -->
-                <div class="clan-card top-3">
-                    <div class="clan-rank-badge">
-                        <i class="fas fa-award"></i>
-                        <span>#3</span>
+                <div class="status-card empty" id="status-empty">
+                    <div class="status-icon">
+                        <i class="fas fa-plus-circle"></i>
                     </div>
-                    <div class="clan-header">
-                        <div class="clan-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="clan-info">
-                            <h3>Depredadores Espaciales</h3>
-                            <p class="clan-tag">[PREDATOR]</p>
-                            <div class="clan-leader">
-                                <i class="fas fa-crown"></i>
-                                Líder: SpaceHunter
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clan-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">8,750</span>
-                            <span class="stat-label">Puntos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">32</span>
-                            <span class="stat-label">Victorias</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">20/30</span>
-                            <span class="stat-label">Miembros</span>
-                        </div>
-                    </div>
-                    <div class="clan-details">
-                        <div class="detail">
-                            <i class="fas fa-calendar"></i>
-                            <span>Fundado: 10/04/2024</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-running"></i>
-                            <span>Especialidad: Asalto</span>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-tag"></i>
-                            <span>Nivel: 9</span>
-                        </div>
-                    </div>
-                    <div class="clan-description">
-                        <p>Tácticas de asalto rápido y emboscadas. Expertos en guerra de guerrillas y ataques sorpresa. Letales en campo abierto.</p>
-                    </div>
-                    <div class="clan-actions">
-                        <button class="btn btn-small btn-primary">Ver Perfil</button>
-                        <button class="btn btn-small btn-secondary">Solicitar Unión</button>
+                    <div class="status-content">
+                        <h3>Sin Inscripción</h3>
+                        <p>No tienes ningún clan inscrito actualmente</p>
+                        <button class="btn btn-primary" id="start-inscription">
+                            <i class="fas fa-edit"></i>
+                            Comenzar Inscripción
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sistema de Clanes -->
-        <section id="sistema-clanes" class="section">
-            <h2 class="section-title">Sistema de Clanes</h2>
-            <div class="systems-grid">
-                <div class="system-card">
-                    <div class="system-icon">
-                        <i class="fas fa-layer-group"></i>
+        <!-- Clanes Inscritos -->
+        <section id="clanes-inscritos" class="section">
+            <h2 class="section-title">Clanes Inscritos al Torneo</h2>
+            <div class="clanes-grid" id="clanes-grid">
+                <!-- Clanes aceptados aparecerán aquí -->
+            </div>
+        </section>
+
+        <!-- Información del Torneo -->
+        <section id="info-torneo" class="section">
+            <h2 class="section-title">Información del Torneo</h2>
+            <div class="tournament-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3>Niveles de Clan</h3>
-                    <p>Los clanes ganan experiencia y suben de nivel, desbloqueando nuevas habilidades y beneficios.</p>
-                    <ul class="system-features">
-                        <li><i class="fas fa-check"></i> Nivel máximo: 10</li>
-                        <li><i class="fas fa-check"></i> Beneficios por nivel</li>
-                        <li><i class="fas fa-check"></i> Habilidades exclusivas</li>
-                        <li><i class="fas fa-check"></i> Recompensas de temporada</li>
+                    <h3>Composición del Equipo</h3>
+                    <ul>
+                        <li>10 jugadores por clan</li>
+                        <li>1 líder obligatorio</li>
+                        <li>Mínimo 8 jugadores activos</li>
+                        <li>Máximo 2 suplentes</li>
                     </ul>
                 </div>
 
-                <div class="system-card">
-                    <div class="system-icon">
+                <div class="info-card">
+                    <div class="info-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <h3>Sistema de Puntos</h3>
-                    <p>Gana puntos para tu clan participando en batallas, eventos y completando objetivos.</p>
-                    <ul class="system-features">
-                        <li><i class="fas fa-check"></i> Puntos por victorias</li>
-                        <li><i class="fas fa-check"></i> Objetivos semanales</li>
-                        <li><i class="fas fa-check"></i> Eventos especiales</li>
-                        <li><i class="fas fa-check"></i> Ranking mensual</li>
+                    <h3>Premios</h3>
+                    <ul>
+                        <li><strong>1er Lugar:</strong> $500 USD</li>
+                        <li><strong>2do Lugar:</strong> $250 USD</li>
+                        <li><strong>3er Lugar:</strong> $100 USD</li>
+                        <li><strong>Todos:</strong> Rango VIP + Items Exclusivos</li>
                     </ul>
                 </div>
 
-                <div class="system-card">
-                    <div class="system-icon">
-                        <i class="fas fa-users-cog"></i>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>Roles y Permisos</h3>
-                    <p>Sistema de roles jerárquico con permisos específicos para cada miembro del clan.</p>
-                    <ul class="system-features">
-                        <li><i class="fas fa-check"></i> Líder</li>
-                        <li><i class="fas fa-check"></i> Oficiales</li>
-                        <li><i class="fas fa-check"></i> Veteranos</li>
-                        <li><i class="fas fa-check"></i> Miembros</li>
+                    <h3>Calendario</h3>
+                    <ul>
+                        <li><strong>Inscripciones:</strong> 1-15 de cada mes</li>
+                        <li><strong>Fase de Grupos:</strong> 16-23 del mes</li>
+                        <li><strong>Playoffs:</strong> 24-28 del mes</li>
+                        <li><strong>Final:</strong> Último día del mes</li>
                     </ul>
                 </div>
-            </div>
-        </section>
 
-        <!-- Alianzas y Diplomacia -->
-        <section id="alianzas" class="section">
-            <h2 class="section-title">Alianzas y Diplomacia</h2>
-            <div class="alliance-system">
-                <div class="alliance-info">
-                    <h3>Sistema de Alianzas</h3>
-                    <p>Forma alianzas estratégicas con otros clanes para dominar el servidor. Las alianzas proporcionan beneficios mutuos y protección.</p>
-                    
-                    <div class="alliance-benefits">
-                        <div class="benefit-card">
-                            <i class="fas fa-handshake"></i>
-                            <h4>Pactos de No Agresión</h4>
-                            <p>Protección mutua entre clanes aliados</p>
-                        </div>
-                        <div class="benefit-card">
-                            <i class="fas fa-share-alt"></i>
-                            <h4>Recursos Compartidos</h4>
-                            <p>Intercambio de recursos y territorios</p>
-                        </div>
-                        <div class="benefit-card">
-                            <i class="fas fa-users"></i>
-                            <h4>Fuerzas Combinadas</h4>
-                            <p>Ataques y defensas coordinadas</p>
-                        </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-gavel"></i>
                     </div>
-                </div>
-
-                <div class="current-alliances">
-                    <h3>Alianzas Activas</h3>
-                    <div class="alliances-list">
-                        <div class="alliance-item">
-                            <div class="alliance-clans">
-                                <span class="clan-badge">[DRAGON]</span>
-                                <i class="fas fa-link"></i>
-                                <span class="clan-badge">[GUARD]</span>
-                            </div>
-                            <span class="alliance-type">Pacto Defensivo</span>
-                            <span class="alliance-duration">45 días</span>
-                        </div>
-                        <div class="alliance-item">
-                            <div class="alliance-clans">
-                                <span class="clan-badge">[PREDATOR]</span>
-                                <i class="fas fa-link"></i>
-                                <span class="clan-badge">[TITAN]</span>
-                            </div>
-                            <span class="alliance-type">Alianza Ofensiva</span>
-                            <span class="alliance-duration">30 días</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sistema de Guerra -->
-        <section id="guerra" class="section">
-            <h2 class="section-title">Sistema de Guerra</h2>
-            <div class="war-systems">
-                <div class="war-type">
-                    <div class="war-icon">
-                        <i class="fas fa-fort-awesome"></i>
-                    </div>
-                    <h3>Asedio a Bases</h3>
-                    <p>Ataques coordinados a las bases enemigas. Destruye el núcleo del clan para obtener la victoria.</p>
-                    <div class="war-details">
-                        <span><i class="fas fa-clock"></i> Duración: 2 horas</span>
-                        <span><i class="fas fa-users"></i> Máx: 20 vs 20</span>
-                        <span><i class="fas fa-trophy"></i> Recompensa: Alta</span>
-                    </div>
-                </div>
-
-                <div class="war-type">
-                    <div class="war-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Control de Territorio</h3>
-                    <p>Lucha por el control de territorios estratégicos. Mantén el control para ganar recursos.</p>
-                    <div class="war-details">
-                        <span><i class="fas fa-clock"></i> Duración: 1 hora</span>
-                        <span><i class="fas fa-users"></i> Máx: 15 vs 15</span>
-                        <span><i class="fas fa-trophy"></i> Recompensa: Media</span>
-                    </div>
-                </div>
-
-                <div class="war-type">
-                    <div class="war-icon">
-                        <i class="fas fa-flag"></i>
-                    </div>
-                    <h3>Captura la Bandera</h3>
-                    <p>Modo clásico de captura de bandera. Estrategia y velocidad son clave.</p>
-                    <div class="war-details">
-                        <span><i class="fas fa-clock"></i> Duración: 30 min</span>
-                        <span><i class="fas fa-users"></i> Máx: 10 vs 10</span>
-                        <span><i class="fas fa-trophy"></i> Recompensa: Baja</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Calendario de Guerras -->
-            <div class="war-schedule">
-                <h3>Próximas Guerras Programadas</h3>
-                <div class="schedule-list">
-                    <div class="schedule-item featured">
-                        <div class="war-time">
-                            <span class="date">Hoy</span>
-                            <span class="time">20:00 GMT</span>
-                        </div>
-                        <div class="war-clans">
-                            <span class="clan-name">[DRAGON] vs [PREDATOR]</span>
-                            <span class="war-type">Asedio a Base</span>
-                        </div>
-                        <button class="btn btn-small btn-accent">Ver Transmisión</button>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="war-time">
-                            <span class="date">Mañana</span>
-                            <span class="time">18:00 GMT</span>
-                        </div>
-                        <div class="war-clans">
-                            <span class="clan-name">[GUARD] vs [TITAN]</span>
-                            <span class="war-type">Control Territorio</span>
-                        </div>
-                        <button class="btn btn-small btn-secondary">Recordarme</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ranking Completo -->
-        <section class="section">
-            <h2 class="section-title">Ranking Completo de Clanes</h2>
-            <div class="full-ranking">
-                <div class="ranking-filters">
-                    <button class="filter-btn active">Todos</button>
-                    <button class="filter-btn">PvP</button>
-                    <button class="filter-btn">Construcción</button>
-                    <button class="filter-btn">Exploración</button>
-                </div>
-                <div class="ranking-table">
-                    <div class="table-header">
-                        <span>Rank</span>
-                        <span>Clan</span>
-                        <span>Puntos</span>
-                        <span>Victorias</span>
-                        <span>Miembros</span>
-                        <span>Nivel</span>
-                    </div>
-                    <!-- Top 3 ya mostrados, continuar desde 4 -->
-                    <div class="table-row">
-                        <span class="rank">4</span>
-                        <span class="clan-info">
-                            <i class="fas fa-mountain"></i>
-                            Titanes del Hielo [TITAN]
-                        </span>
-                        <span class="points">8,250</span>
-                        <span>28</span>
-                        <span>18/30</span>
-                        <span class="level">8</span>
-                    </div>
-                    <div class="table-row">
-                        <span class="rank">5</span>
-                        <span class="clan-info">
-                            <i class="fas fa-leaf"></i>
-                            Guardianes del Bosque [FOREST]
-                        </span>
-                        <span class="points">7,890</span>
-                        <span>25</span>
-                        <span>15/30</span>
-                        <span class="level">7</span>
-                    </div>
-                    <div class="table-row">
-                        <span class="rank">6</span>
-                        <span class="clan-info">
-                            <i class="fas fa-fire"></i>
-                            Fénix Renacidos [PHOENIX]
-                        </span>
-                        <span class="points">7,450</span>
-                        <span>22</span>
-                        <span>20/30</span>
-                        <span class="level">7</span>
-                    </div>
-                    <!-- Más filas... -->
+                    <h3>Reglas</h3>
+                    <ul>
+                        <li>Respeto entre jugadores</li>
+                        <li>Prohibido hack/clientes</li>
+                        <li>Puntualidad en partidos</li>
+                        <li>Decisión admin es final</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -490,62 +202,270 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>MYDCRAFF CLANES</h3>
-                    <p>Donde las leyendas se forjan en equipo</p>
-                    <p>Unidos para dominar el universo de Minecraft</p>
+                    <p>Torneos competitivos para clanes organizados</p>
+                    <p>Donde la estrategia y el trabajo en equipo triunfan</p>
                 </div>
                 <div class="footer-section">
                     <h4>Navegación</h4>
-                    <a href="#top-clanes">Top Clanes</a>
-                    <a href="#sistema-clanes">Sistema</a>
-                    <a href="#alianzas">Alianzas</a>
-                    <a href="#guerra">Guerras</a>
+                    <a href="#estado-inscripcion">Estado</a>
+                    <a href="#clanes-inscritos">Clanes Inscritos</a>
+                    <a href="#info-torneo">Información</a>
                 </div>
                 <div class="footer-section">
                     <h4>Recursos</h4>
-                    <a href="#">Guía de Clanes</a>
-                    <a href="#">Estrategias de Guerra</a>
-                    <a href="#">Reglas de Batalla</a>
+                    <a href="#">Reglas Completas</a>
+                    <a href="#">Guía de Estrategias</a>
                     <a href="#">Sistema de Puntos</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Comunidad</h4>
-                    <a href="#"><i class="fab fa-discord"></i> Discord Clanes</a>
-                    <a href="#"><i class="fas fa-calendar"></i> Eventos</a>
-                    <a href="#"><i class="fas fa-trophy"></i> Torneos</a>
+                    <h4>Soporte</h4>
+                    <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contacto</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 MYDCRAFF Sistema de Clanes. La unión hace la fuerza.</p>
+                <p>&copy; 2025 MYDCRAFF Torneos de Clanes. La unión hace la fuerza.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modal para Crear Clan -->
-    <div id="create-clan-modal" class="modal">
-        <div class="modal-content">
+    <!-- Modal Inscripción Clan -->
+    <div id="inscripcion-modal" class="modal">
+        <div class="modal-content large">
             <div class="modal-header">
-                <h3>Crear Nuevo Clan</h3>
+                <h3><i class="fas fa-edit"></i> Inscribir Clan en el Torneo</h3>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <form class="clan-form">
-                    <div class="form-group">
-                        <label for="clan-name">Nombre del Clan</label>
-                        <input type="text" id="clan-name" placeholder="Ej: Guerreros Legendarios" maxlength="20">
+                <form id="clan-inscription-form" class="inscription-form">
+                    <!-- Información del Clan -->
+                    <div class="form-section">
+                        <h4>Información del Clan</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="clan-name">Nombre del Clan *</label>
+                                <input type="text" id="clan-name" required maxlength="20" placeholder="Ej: Dragones Cósmicos">
+                            </div>
+                            <div class="form-group">
+                                <label for="clan-tag">Tag del Clan *</label>
+                                <input type="text" id="clan-tag" required maxlength="6" placeholder="Ej: [DRAGON]">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="clan-description">Descripción del Clan *</label>
+                                <textarea id="clan-description" required rows="3" placeholder="Describe la historia, objetivos y valores de tu clan..."></textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="clan-tag">Tag del Clan (3-6 letras)</label>
-                        <input type="text" id="clan-tag" placeholder="Ej: [GL]" maxlength="6">
+
+                    <!-- Jugadores del Clan -->
+                    <div class="form-section">
+                        <h4>Jugadores del Clan (10 required)</h4>
+                        <div class="players-container" id="players-container">
+                            <!-- Jugador 1 (Líder) -->
+                            <div class="player-form leader">
+                                <div class="player-header">
+                                    <i class="fas fa-crown"></i>
+                                    <h5>Líder del Clan</h5>
+                                </div>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Nombre de Jugador *</label>
+                                        <input type="text" name="player-name[]" required placeholder="Tu nombre en el juego">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Discord ID *</label>
+                                        <input type="text" name="player-discord[]" required placeholder="Usuario#1234">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email *</label>
+                                        <input type="email" name="player-email[]" required placeholder="tu@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Rol Principal *</label>
+                                        <select name="player-role[]" required>
+                                            <option value="">Seleccionar rol</option>
+                                            <option value="pvp">PvP</option>
+                                            <option value="estratega">Estratega</option>
+                                            <option value="support">Support</option>
+                                            <option value="builder">Builder</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Jugadores 2-10 -->
+                            <div class="player-form" data-player="2">
+                                <div class="player-header">
+                                    <span class="player-number">Jugador 2</span>
+                                    <button type="button" class="btn btn-danger btn-sm remove-player" style="display: none;">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Nombre de Jugador *</label>
+                                        <input type="text" name="player-name[]" required placeholder="Nombre en el juego">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Discord ID *</label>
+                                        <input type="text" name="player-discord[]" required placeholder="Usuario#1234">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email *</label>
+                                        <input type="email" name="player-email[]" required placeholder="jugador@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Rol Principal *</label>
+                                        <select name="player-role[]" required>
+                                            <option value="">Seleccionar rol</option>
+                                            <option value="pvp">PvP</option>
+                                            <option value="estratega">Estratega</option>
+                                            <option value="support">Support</option>
+                                            <option value="builder">Builder</option>
+                                            <option value="flex">Flex</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="players-actions">
+                            <button type="button" class="btn btn-secondary" id="add-player" disabled>
+                                <i class="fas fa-plus"></i> Agregar Jugador (2/10)
+                            </button>
+                            <span class="players-counter" id="players-counter">2/10 jugadores</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="clan-description">Descripción</label>
-                        <textarea id="clan-description" placeholder="Describe los objetivos y valores de tu clan..." rows="3"></textarea>
+
+                    <!-- Términos y Condiciones -->
+                    <div class="form-section">
+                        <div class="terms-group">
+                            <input type="checkbox" id="accept-terms" required>
+                            <label for="accept-terms">
+                                Acepto las <a href="#" class="link">reglas del torneo</a> y confirmo que toda la información proporcionada es verídica *
+                            </label>
+                        </div>
                     </div>
+
                     <div class="form-actions">
                         <button type="button" class="btn btn-secondary modal-close">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Crear Clan</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Inscripción
+                        </button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login Admin -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lock"></i> Acceso Administrativo</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="admin-username">Usuario</label>
+                    <input type="text" id="admin-username" required placeholder="Usuario administrador">
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Contraseña</label>
+                    <input type="password" id="admin-password" required placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i class="fas fa-sign-in-alt"></i> Ingresar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Panel de Administración -->
+    <div id="admin-panel" class="admin-panel-modal">
+        <div class="admin-panel-content">
+            <div class="admin-header">
+                <h3><i class="fas fa-cogs"></i> Panel de Administración - Clanes</h3>
+                <button class="btn btn-secondary btn-sm" id="logout-admin">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </div>
+            
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="pending">Pendientes</button>
+                <button class="tab-btn" data-tab="accepted">Aceptados</button>
+                <button class="tab-btn" data-tab="rejected">Rechazados</button>
+                <button class="tab-btn" data-tab="stats">Estadísticas</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Pestaña Pendientes -->
+                <div id="tab-pending" class="tab-pane active">
+                    <h4>Clanes Pendientes de Revisión</h4>
+                    <div id="pending-clans-list" class="clans-admin-grid">
+                        <!-- Clanes pendientes aparecerán aquí -->
+                    </div>
+                </div>
+
+                <!-- Pestaña Aceptados -->
+                <div id="tab-accepted" class="tab-pane">
+                    <h4>Clanes Aceptados en el Torneo</h4>
+                    <div id="accepted-clans-list" class="clans-admin-grid">
+                        <!-- Clanes aceptados aparecerán aquí -->
+                    </div>
+                </div>
+
+                <!-- Pestaña Rechazados -->
+                <div id="tab-rejected" class="tab-pane">
+                    <h4>Clanes Rechazados</h4>
+                    <div id="rejected-clans-list" class="clans-admin-grid">
+                        <!-- Clanes rechazados aparecerán aquí -->
+                    </div>
+                </div>
+
+                <!-- Pestaña Estadísticas -->
+                <div id="tab-stats" class="tab-pane">
+                    <h4>Estadísticas del Torneo</h4>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h5>Total Clanes</h5>
+                            <span id="total-clans">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Aceptados</h5>
+                            <span id="accepted-count">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Pendientes</h5>
+                            <span id="pending-count">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Rechazados</h5>
+                            <span id="rejected-count">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Total Jugadores</h5>
+                            <span id="total-players">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h5>Capacidad</h5>
+                            <span id="capacity">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="management-actions">
+                        <button class="btn btn-warning" id="clear-rejected">
+                            <i class="fas fa-trash"></i> Limpiar Rechazados
+                        </button>
+                        <button class="btn btn-danger" id="clear-all">
+                            <i class="fas fa-broom"></i> Limpiar Todos
+                        </button>
+                        <button class="btn btn-info" id="export-data">
+                            <i class="fas fa-download"></i> Exportar Datos
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
