@@ -3,61 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscripción de Clanes - MYDCRAFF</title>
-    <meta name="description" content="Sistema de inscripción de clanes para torneos de MYDCRAFF. Inscribe tu clan y compite por la gloria.">
+    <title>Inscripción de Clanes - MYDCRAFF | Torneos Competitivos</title>
+    <meta name="description" content="Sistema de inscripción de clanes para torneos de MYDCRAFF. Reúne a tu equipo de 10 jugadores y compite por premios en efectivo y gloria.">
+    <meta name="keywords" content="minecraft, torneos, clanes, pvp, mydcraff, inscripción, competitivo">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/clanes.css">
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="twinkling"></div>
+    <div class="stars" aria-hidden="true"></div>
+    <div class="twinkling" aria-hidden="true"></div>
     
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
-            <a href="../index.html" class="logo">
-                <i class="fas fa-shield-alt"></i>
+            <a href="../index.html" class="logo" aria-label="MYDCRAFF CLANES - Página principal">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
                 MYDCRAFF CLANES
             </a>
-            <nav class="nav">
+            <nav class="nav" role="navigation" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
                 <a href="torneospvp.html">Torneos PvP</a>
                 <a href="lligacontruc.html">Constructor</a>
                 <a href="elytras.html">Elytras</a>
-                
+                <a href="ipserver.html">IP</a>
                 <a href="ipserver.html" class="btn btn--primary">¡Únete Ahora!</a>
             </nav>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" role="main">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content">
-                <h1>Inscripción de Clanes</h1>
+                <h1 id="hero-title">Inscripción de Clanes</h1>
                 <p class="hero-subtitle">Reúne a tu equipo de 10 guerreros y compite por la gloria en los torneos de clanes.</p>
                 <div class="hero-stats">
                     <div class="stat">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" aria-hidden="true"></i>
                         <span>10 Jugadores por Clan</span>
                     </div>
                     <div class="stat">
-                        <i class="fas fa-trophy"></i>
-                        <span>Premio: $500 USD</span>
+                        <i class="fas fa-trophy" aria-hidden="true"></i>
+                        <span>Premio: $0 USD</span>
                     </div>
                     <div class="stat">
-                        <i class="fas fa-calendar"></i>
+                        <i class="fas fa-calendar" aria-hidden="true"></i>
                         <span>Torneo Semanal</span>
                     </div>
                 </div>
                 <div class="hero-actions">
-                    <button class="btn btn-primary" id="inscribir-clan">
-                        <i class="fas fa-edit"></i>
+                    <button class="btn btn-primary" id="inscribir-clan" aria-label="Inscribir clan en el torneo">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
                         Inscribir Clan
                     </button>
-                    
                 </div>
             </div>
-            <div class="hero-visual">
+            <div class="hero-visual" aria-hidden="true">
                 <div class="clan-badge-large">
                     <i class="fas fa-users"></i>
                 </div>
@@ -71,12 +72,12 @@
         </section>
 
         <!-- Estado de Inscripción -->
-        <section id="estado-inscripcion" class="section">
-            <h2 class="section-title">Estado de tu Inscripción</h2>
+        <section id="estado-inscripcion" class="section" aria-labelledby="estado-title">
+            <h2 id="estado-title" class="section-title">Estado de tu Inscripción</h2>
             <div class="status-container">
                 <div class="status-card pending" id="status-pending">
                     <div class="status-icon">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
                     </div>
                     <div class="status-content">
                         <h3>En Revisión</h3>
@@ -89,7 +90,7 @@
                 
                 <div class="status-card confirmed" id="status-confirmed" style="display: none;">
                     <div class="status-icon">
-                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-check-circle" aria-hidden="true"></i>
                     </div>
                     <div class="status-content">
                         <h3>¡Inscripción Aceptada!</h3>
@@ -102,7 +103,7 @@
 
                 <div class="status-card rejected" id="status-rejected" style="display: none;">
                     <div class="status-icon">
-                        <i class="fas fa-times-circle"></i>
+                        <i class="fas fa-times-circle" aria-hidden="true"></i>
                     </div>
                     <div class="status-content">
                         <h3>Inscripción Rechazada</h3>
@@ -115,13 +116,13 @@
 
                 <div class="status-card empty" id="status-empty">
                     <div class="status-icon">
-                        <i class="fas fa-plus-circle"></i>
+                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
                     </div>
                     <div class="status-content">
                         <h3>Sin Inscripción</h3>
                         <p>No tienes ningún clan inscrito actualmente</p>
-                        <button class="btn btn-primary" id="start-inscription">
-                            <i class="fas fa-edit"></i>
+                        <button class="btn btn-primary" id="start-inscription" aria-label="Comenzar proceso de inscripción">
+                            <i class="fas fa-edit" aria-hidden="true"></i>
                             Comenzar Inscripción
                         </button>
                     </div>
@@ -130,20 +131,20 @@
         </section>
 
         <!-- Clanes Inscritos -->
-        <section id="clanes-inscritos" class="section">
-            <h2 class="section-title">Clanes Inscritos al Torneo</h2>
-            <div class="clanes-grid" id="clanes-grid">
+        <section id="clanes-inscritos" class="section" aria-labelledby="clanes-title">
+            <h2 id="clanes-title" class="section-title">Clanes Inscritos al Torneo</h2>
+            <div class="clanes-grid" id="clanes-grid" aria-live="polite">
                 <!-- Clanes aceptados aparecerán aquí -->
             </div>
         </section>
 
         <!-- Información del Torneo -->
-        <section id="info-torneo" class="section">
-            <h2 class="section-title">Información del Torneo</h2>
+        <section id="info-torneo" class="section" aria-labelledby="info-title">
+            <h2 id="info-title" class="section-title">Información del Torneo</h2>
             <div class="tournament-info-grid">
                 <div class="info-card">
                     <div class="info-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" aria-hidden="true"></i>
                     </div>
                     <h3>Composición del Equipo</h3>
                     <ul>
@@ -156,33 +157,33 @@
 
                 <div class="info-card">
                     <div class="info-icon">
-                        <i class="fas fa-trophy"></i>
+                        <i class="fas fa-trophy" aria-hidden="true"></i>
                     </div>
                     <h3>Premios</h3>
                     <ul>
-                        <li><strong>1er Lugar:</strong> $500 USD</li>
-                        <li><strong>2do Lugar:</strong> $250 USD</li>
-                        <li><strong>3er Lugar:</strong> $100 USD</li>
-                        <li><strong>Todos:</strong> Rango VIP + Items Exclusivos</li>
+                        <li><strong>1er Lugar:</strong> $0 USD</li>
+                        <li><strong>2do Lugar:</strong> $0 USD</li>
+                        <li><strong>3er Lugar:</strong> $0 USD</li>
+                        <li><strong>Todos:</strong> Items Exclusivos</li>
                     </ul>
                 </div>
 
                 <div class="info-card">
                     <div class="info-icon">
-                        <i class="fas fa-calendar-alt"></i>
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
                     </div>
                     <h3>Calendario</h3>
                     <ul>
-                        <li><strong>Inscripciones:</strong> 1-15 de cada mes</li>
-                        <li><strong>Fase de Grupos:</strong> 16-23 del mes</li>
-                        <li><strong>Playoffs:</strong> 24-28 del mes</li>
-                        <li><strong>Final:</strong> Último día del mes</li>
+                        <li><strong>Inscripciones:</strong> proximos</li>
+                        <li><strong>Fase de Grupos:</strong> Por definir</li>
+                        <li><strong>Playoffs:</strong> Proximo</li>
+                        <li><strong>Final:</strong>proximo</li>
                     </ul>
                 </div>
 
                 <div class="info-card">
                     <div class="info-icon">
-                        <i class="fas fa-gavel"></i>
+                        <i class="fas fa-gavel" aria-hidden="true"></i>
                     </div>
                     <h3>Reglas</h3>
                     <ul>
@@ -197,7 +198,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -219,9 +220,13 @@
                 </div>
                 <div class="footer-section">
                     <h4>Soporte</h4>
-                    <a href="#"><i class="fab fa-discord"></i> Discord</a>
-                    <a href="#"><i class="fas fa-question-circle"></i> FAQ</a>
-                    <a href="#"><i class="fas fa-envelope"></i> Contacto</a>
+                    <a href="#"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a>
+                    <a href="#"><i class="fas fa-question-circle" aria-hidden="true"></i> FAQ</a>
+                    <a href="#"><i class="fas fa-envelope" aria-hidden="true"></i> Contacto</a>
+                    <!-- Botón de Administración -->
+                    <button class="admin-btn" id="open-admin-panel">
+                        <i class="fas fa-cogs" aria-hidden="true"></i> Login
+                    </button>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -231,59 +236,62 @@
     </footer>
 
     <!-- Modal Inscripción Clan -->
-    <div id="inscripcion-modal" class="modal">
+    <div id="inscripcion-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
         <div class="modal-content large">
             <div class="modal-header">
-                <h3><i class="fas fa-edit"></i> Inscribir Clan en el Torneo</h3>
-                <button class="modal-close">&times;</button>
+                <h3 id="modal-title"><i class="fas fa-edit" aria-hidden="true"></i> Inscribir Clan en el Torneo</h3>
+                <button class="modal-close" aria-label="Cerrar modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form id="clan-inscription-form" class="inscription-form">
+                <form id="clan-inscription-form" class="inscription-form" novalidate>
                     <!-- Información del Clan -->
-                    <div class="form-section">
-                        <h4>Información del Clan</h4>
+                    <fieldset class="form-section">
+                        <legend><h4>Información del Clan</h4></legend>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="clan-name">Nombre del Clan *</label>
-                                <input type="text" id="clan-name" required maxlength="20" placeholder="Ej: Dragones Cósmicos">
+                                <input type="text" id="clan-name" required maxlength="20" placeholder="Ej: Dragones Cósmicos" aria-describedby="clan-name-help">
+                                <small id="clan-name-help" class="form-help">Máximo 20 caracteres</small>
                             </div>
                             <div class="form-group">
                                 <label for="clan-tag">Tag del Clan *</label>
-                                <input type="text" id="clan-tag" required maxlength="6" placeholder="Ej: [DRAGON]">
+                                <input type="text" id="clan-tag" required maxlength="6" placeholder="Ej: [DRAGON]" aria-describedby="clan-tag-help">
+                                <small id="clan-tag-help" class="form-help">Máximo 6 caracteres</small>
                             </div>
                             <div class="form-group full-width">
                                 <label for="clan-description">Descripción del Clan *</label>
-                                <textarea id="clan-description" required rows="3" placeholder="Describe la historia, objetivos y valores de tu clan..."></textarea>
+                                <textarea id="clan-description" required rows="3" placeholder="Describe la historia, objetivos y valores de tu clan..." aria-describedby="clan-description-help"></textarea>
+                                <small id="clan-description-help" class="form-help">Mínimo 50 caracteres</small>
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
 
                     <!-- Jugadores del Clan -->
-                    <div class="form-section">
-                        <h4>Jugadores del Clan (10 required)</h4>
+                    <fieldset class="form-section">
+                        <legend><h4>Jugadores del Clan (10 required)</h4></legend>
                         <div class="players-container" id="players-container">
                             <!-- Jugador 1 (Líder) -->
                             <div class="player-form leader">
                                 <div class="player-header">
-                                    <i class="fas fa-crown"></i>
+                                    <i class="fas fa-crown" aria-hidden="true"></i>
                                     <h5>Líder del Clan</h5>
                                 </div>
                                 <div class="form-grid">
                                     <div class="form-group">
-                                        <label>Nombre de Jugador *</label>
-                                        <input type="text" name="player-name[]" required placeholder="Tu nombre en el juego">
+                                        <label for="player-name-1">Nombre de Jugador *</label>
+                                        <input type="text" id="player-name-1" name="player-name[]" required placeholder="Tu nombre en el juego">
                                     </div>
                                     <div class="form-group">
-                                        <label>Discord ID *</label>
-                                        <input type="text" name="player-discord[]" required placeholder="Usuario#1234">
+                                        <label for="player-discord-1">Discord ID *</label>
+                                        <input type="text" id="player-discord-1" name="player-discord[]" required placeholder="Usuario#1234">
                                     </div>
                                     <div class="form-group">
-                                        <label>Email *</label>
-                                        <input type="email" name="player-email[]" required placeholder="tu@email.com">
+                                        <label for="player-email-1">Email *</label>
+                                        <input type="email" id="player-email-1" name="player-email[]" required placeholder="tu@email.com">
                                     </div>
                                     <div class="form-group">
-                                        <label>Rol Principal *</label>
-                                        <select name="player-role[]" required>
+                                        <label for="player-role-1">Rol Principal *</label>
+                                        <select id="player-role-1" name="player-role[]" required>
                                             <option value="">Seleccionar rol</option>
                                             <option value="pvp">PvP</option>
                                             <option value="estratega">Estratega</option>
@@ -298,26 +306,26 @@
                             <div class="player-form" data-player="2">
                                 <div class="player-header">
                                     <span class="player-number">Jugador 2</span>
-                                    <button type="button" class="btn btn-danger btn-sm remove-player" style="display: none;">
-                                        <i class="fas fa-times"></i>
+                                    <button type="button" class="btn btn-danger btn-sm remove-player" style="display: none;" aria-label="Eliminar jugador">
+                                        <i class="fas fa-times" aria-hidden="true"></i>
                                     </button>
                                 </div>
                                 <div class="form-grid">
                                     <div class="form-group">
-                                        <label>Nombre de Jugador *</label>
-                                        <input type="text" name="player-name[]" required placeholder="Nombre en el juego">
+                                        <label for="player-name-2">Nombre de Jugador *</label>
+                                        <input type="text" id="player-name-2" name="player-name[]" required placeholder="Nombre en el juego">
                                     </div>
                                     <div class="form-group">
-                                        <label>Discord ID *</label>
-                                        <input type="text" name="player-discord[]" required placeholder="Usuario#1234">
+                                        <label for="player-discord-2">Discord ID *</label>
+                                        <input type="text" id="player-discord-2" name="player-discord[]" required placeholder="Usuario#1234">
                                     </div>
                                     <div class="form-group">
-                                        <label>Email *</label>
-                                        <input type="email" name="player-email[]" required placeholder="jugador@email.com">
+                                        <label for="player-email-2">Email *</label>
+                                        <input type="email" id="player-email-2" name="player-email[]" required placeholder="jugador@email.com">
                                     </div>
                                     <div class="form-group">
-                                        <label>Rol Principal *</label>
-                                        <select name="player-role[]" required>
+                                        <label for="player-role-2">Rol Principal *</label>
+                                        <select id="player-role-2" name="player-role[]" required>
                                             <option value="">Seleccionar rol</option>
                                             <option value="pvp">PvP</option>
                                             <option value="estratega">Estratega</option>
@@ -331,12 +339,13 @@
                         </div>
 
                         <div class="players-actions">
-                            <button type="button" class="btn btn-secondary" id="add-player" disabled>
-                                <i class="fas fa-plus"></i> Agregar Jugador (2/10)
+                            <button type="button" class="btn btn-secondary" id="add-player" disabled aria-describedby="add-player-help">
+                                <i class="fas fa-plus" aria-hidden="true"></i> Agregar Jugador (2/10)
                             </button>
                             <span class="players-counter" id="players-counter">2/10 jugadores</span>
+                            <small id="add-player-help" class="form-help">Máximo 10 jugadores por clan</small>
                         </div>
-                    </div>
+                    </fieldset>
 
                     <!-- Términos y Condiciones -->
                     <div class="form-section">
@@ -351,7 +360,7 @@
                     <div class="form-actions">
                         <button type="button" class="btn btn-secondary modal-close">Cancelar</button>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Enviar Inscripción
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Inscripción
                         </button>
                     </div>
                 </form>
@@ -360,11 +369,11 @@
     </div>
 
     <!-- Modal Login Admin -->
-    <div id="login-modal" class="modal">
+    <div id="login-modal" class="modal" role="dialog" aria-labelledby="login-title" aria-modal="true">
         <div class="modal-content">
             <div class="modal-header">
-                <h3><i class="fas fa-lock"></i> Acceso Administrativo</h3>
-                <button class="modal-close">&times;</button>
+                <h3 id="login-title"><i class="fas fa-lock" aria-hidden="true"></i> Acceso Administrativo</h3>
+                <button class="modal-close" aria-label="Cerrar modal">&times;</button>
             </div>
             <form id="login-form">
                 <div class="form-group">
@@ -376,7 +385,7 @@
                     <input type="password" id="admin-password" required placeholder="Contraseña">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">
-                    <i class="fas fa-sign-in-alt"></i> Ingresar
+                    <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Ingresar
                 </button>
             </form>
         </div>
@@ -386,9 +395,9 @@
     <div id="admin-panel" class="admin-panel-modal">
         <div class="admin-panel-content">
             <div class="admin-header">
-                <h3><i class="fas fa-cogs"></i> Panel de Administración - Clanes</h3>
+                <h3><i class="fas fa-cogs" aria-hidden="true"></i> Panel de Administración - Clanes</h3>
                 <button class="btn btn-secondary btn-sm" id="logout-admin">
-                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Cerrar Sesión
                 </button>
             </div>
             
